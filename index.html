@@ -26,13 +26,22 @@ a { color: inherit; text-decoration: none; }
 .wrap { width: min(1180px, 100% - 48px); margin-inline: auto; }
 em { font-style: italic; color: var(--accent); }
 
-/* hero name: letters rise in one by one, then the first name breathes */
-h1 .ch { display: inline-block; opacity: 0; transform: translateY(.55em) rotate(5deg); filter: blur(12px);
-  animation: ch 1s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(.2s + var(--i) * .06s); }
-h1 em { animation: glow 4.5s ease-in-out 1.8s infinite; }
-@keyframes ch { to { opacity: 1; transform: none; filter: blur(0); } }
+/* hero name: rolling text. Each letter is a reel of repeated glyphs in a clipped cell; the reel scrolls whole
+   letter-heights with an expo-out ease (cycles and duration vary per letter), then settles on the real glyph. */
+h1 .ch { position: relative; display: inline-block; vertical-align: top; }
+h1 .ghost { display: block; visibility: hidden; }               /* sets the cell box so the landed word is exact */
+h1 .mask { position: absolute; inset: 0; overflow: hidden; }
+h1 .reel { display: block; will-change: transform; transition: transform var(--dur) cubic-bezier(.16, 1, .3, 1) var(--delay); }
+h1 .reel > span { display: block; height: calc(var(--lh) * 1em); }
+h1.go .reel { transform: translate3d(0, calc(var(--to) * var(--lh) * -1em), 0); }
+h1 .done .mask { overflow: visible; }                           /* unclip once landed (italic swashes, glow) */
+h1 .done .reel > span:not(:last-child) { visibility: hidden; }
+h1 em { animation: glow 4.5s ease-in-out 3.6s infinite; }
 @keyframes glow { 50% { text-shadow: 0 0 36px rgba(255,157,122,.5); } }
-@media (prefers-reduced-motion: reduce) { h1 .ch { animation: none; opacity: 1; transform: none; filter: none; } h1 em { animation: none; } }
+@media (prefers-reduced-motion: reduce) {
+  h1 .reel { transition: none; transform: translate3d(0, calc(var(--to) * var(--lh) * -1em), 0); }
+  h1 em { animation: none; }
+}
 
 /* nav + progress */
 #bar { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); z-index: 20; }
@@ -53,7 +62,7 @@ section { min-height: 100svh; display: flex; align-items: center; padding: 120px
 .right .col { margin-left: auto; }
 .eyebrow { display: flex; align-items: center; gap: 14px; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 26px; }
 .eyebrow::before { content: ''; width: 34px; height: 1px; background: var(--accent); }
-h1 { font: 330 clamp(58px, 9.2vw, 128px)/.95 var(--serif); letter-spacing: -.035em; }
+h1 { --lh: .95; font: 330 clamp(58px, 9.2vw, 128px)/var(--lh) var(--serif); letter-spacing: -.035em; }
 h2 { font: 340 clamp(34px, 4.4vw, 58px)/1.08 var(--serif); letter-spacing: -.025em; }
 h3 { font-size: 17px; font-weight: 600; line-height: 1.35; letter-spacing: -.005em; }
 p.lead { color: var(--muted); font-size: 18px; margin-top: 24px; max-width: 540px; }
@@ -264,20 +273,25 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10
 <script>
 (() => {                                   // split the hero name into letters for the entrance animation
   const h1 = document.querySelector('h1'); let i = 0;
+  const rnd = n => { const x = Math.sin(n * 127.1 + 7) * 43758.5453; return x - Math.floor(x); };   // deterministic per-letter variety
   h1.setAttribute('aria-label', h1.textContent.replace('Mahshid', 'Mahshid '));  // <br> adds no space to textContent
   (function split(n) {
     [...n.childNodes].forEach(c => {
       if (c.nodeType === 3) {
         const f = document.createDocumentFragment();
         [...c.textContent].forEach(ch => {
-          const s = document.createElement('span');
-          s.className = 'ch'; s.setAttribute('aria-hidden', 'true'); s.style.setProperty('--i', i++); s.textContent = ch;
+          const s = document.createElement('span'), n = i++, cycles = 3 + Math.floor(rnd(n) * 3);
+          s.className = 'ch'; s.setAttribute('aria-hidden', 'true');
+          s.style.cssText = `--to:${cycles};--dur:${(2 + rnd(n + 50) * 1.1).toFixed(2)}s;--delay:${(.15 + n * .04).toFixed(2)}s`;
+          s.innerHTML = `<span class="ghost">${ch}</span><span class="mask"><span class="reel">${`<span>${ch}</span>`.repeat(cycles + 1)}</span></span>`;
           f.append(s);
         });
         c.replaceWith(f);
       } else if (c.nodeName !== 'BR') split(c);
     });
   })(h1);
+  h1.addEventListener('transitionend', e => e.target.closest?.('.ch')?.classList.add('done'));
+  (document.fonts?.ready ?? Promise.resolve()).then(() => requestAnimationFrame(() => requestAnimationFrame(() => h1.classList.add('go'))));
 
   document.getElementById('yr').textContent = new Date().getFullYear();
   const cp = document.getElementById('copy'), MAIL = 'kazemi.mahshid75@gmail.com';
