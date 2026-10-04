@@ -25,6 +25,14 @@ a { color: inherit; text-decoration: none; }
 .wrap { width: min(1180px, 100% - 48px); margin-inline: auto; }
 em { font-style: italic; color: var(--accent); }
 
+/* hero name: letters rise in one by one, then the first name breathes */
+h1 .ch { display: inline-block; opacity: 0; transform: translateY(.55em) rotate(5deg); filter: blur(12px);
+  animation: ch 1s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(.2s + var(--i) * .06s); }
+h1 em { animation: glow 4.5s ease-in-out 1.8s infinite; }
+@keyframes ch { to { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes glow { 50% { text-shadow: 0 0 36px rgba(255,157,122,.5); } }
+@media (prefers-reduced-motion: reduce) { h1 .ch { animation: none; opacity: 1; transform: none; filter: none; } h1 em { animation: none; } }
+
 /* nav + progress */
 #bar { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); z-index: 20; }
 nav { position: fixed; inset: 0 0 auto; z-index: 10; background: linear-gradient(#0a0d12ee, #0a0d1200); }
@@ -124,7 +132,7 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px
 <main>
   <section id="hero"><div class="wrap"><div class="col" style="max-width:720px">
     <p class="eyebrow reveal">HR Business Partner · Scrum Master</p>
-    <h1 class="reveal"><em>Mahshid</em><br>Kazemi</h1>
+    <h1><em>Mahshid</em><br>Kazemi</h1>
     <p class="lead reveal">Aligning people, culture and delivery — so teams can do their best work, sustainably.</p>
     <div class="btns reveal">
       <a class="btn p" href="#contact">Get in touch</a>
@@ -213,6 +221,73 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px
 </main>
 <footer>© Mahshid Kazemi</footer>
 
+<script>
+(() => {                                   // split the hero name into letters for the entrance animation
+  const h1 = document.querySelector('h1'); let i = 0;
+  h1.setAttribute('aria-label', h1.textContent.replace('Mahshid', 'Mahshid '));  // <br> adds no space to textContent
+  (function split(n) {
+    [...n.childNodes].forEach(c => {
+      if (c.nodeType === 3) {
+        const f = document.createDocumentFragment();
+        [...c.textContent].forEach(ch => {
+          const s = document.createElement('span');
+          s.className = 'ch'; s.setAttribute('aria-hidden', 'true'); s.style.setProperty('--i', i++); s.textContent = ch;
+          f.append(s);
+        });
+        c.replaceWith(f);
+      } else if (c.nodeName !== 'BR') split(c);
+    });
+  })(h1);
+
+  // pointer (mouse or touch) pushes letters apart; springs pull them back together
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const L = [...h1.querySelectorAll('.ch')].map(el => ({ el, x: 0, y: 0, r: 0, vx: 0, vy: 0, vr: 0 }));
+  let P = null, raf = 0, last = 0, hold = 0;
+  const R = () => Math.max(100, Math.min(190, innerWidth * .15));
+  const near = (x, y) => {                    // only react near the name, so the page stays quiet elsewhere
+    const b = h1.getBoundingClientRect(), m = R();
+    return x > b.left - m && x < b.right + m && y > b.top - m && y < b.bottom + m;
+  };
+  function tick(t) {
+    const dt = Math.min((t - last) / 16.7 || 1, 3), r = R(); last = t;
+    let moving = false;
+    L.forEach(l => {
+      const b = l.el.getBoundingClientRect(), cx = b.left + b.width / 2 - l.x, cy = b.top + b.height / 2 - l.y;
+      let tx = 0, ty = 0, tr = 0;
+      if (P) {
+        const dx = cx - P.x, dy = cy - P.y, d = Math.hypot(dx, dy) || 1, reach = r * (P.down ? 1.8 : 1);
+        if (d < reach) {
+          const k = (reach - d) * .95;
+          tx = dx / d * k; ty = dy / d * k; tr = dx / reach * 40;
+        }
+      }
+      l.vx += (tx - l.x) * .11 * dt; l.vy += (ty - l.y) * .11 * dt; l.vr += (tr - l.r) * .11 * dt;
+      const damp = Math.pow(.8, dt);          // under-damped: letters overshoot a little as they rejoin
+      l.vx *= damp; l.vy *= damp; l.vr *= damp;
+      l.x += l.vx * dt; l.y += l.vy * dt; l.r += l.vr * dt;
+      l.el.style.translate = `${l.x.toFixed(2)}px ${l.y.toFixed(2)}px`;
+      l.el.style.rotate = `${l.r.toFixed(2)}deg`;
+      if (Math.abs(l.x) + Math.abs(l.y) + Math.abs(l.r) + Math.abs(l.vx) + Math.abs(l.vy) > .05) moving = true;
+    });
+    raf = P || moving ? requestAnimationFrame(tick) : 0;
+  }
+  const aim = (e, down) => {
+    clearTimeout(hold);
+    P = near(e.clientX, e.clientY) ? { x: e.clientX, y: e.clientY, down } : null;
+    if (P && !raf) { last = performance.now(); raf = requestAnimationFrame(tick); }
+  };
+  const release = e => {                      // touch: keep the burst briefly so a tap is visible
+    clearTimeout(hold);
+    hold = setTimeout(() => P = null, e.pointerType === 'mouse' ? 0 : 350);
+  };
+  let down = false;
+  addEventListener('pointermove', e => { if (e.pointerType === 'mouse' || down) aim(e, down); });
+  addEventListener('pointerdown', e => { down = true; aim(e, true); });
+  addEventListener('pointerup', e => { down = false; e.pointerType === 'mouse' ? aim(e, false) : release(e); });
+  addEventListener('pointercancel', e => { down = false; release(e); });   // finger started scrolling: let go
+  document.addEventListener('mouseout', e => { if (!e.relatedTarget) P = null; });   // mouse left the window
+})();
+</script>
 <script type="importmap">{"imports":{
   "three":"./vendor/three/build/three.module.js",
   "three/addons/":"./vendor/three/examples/jsm/"}}</script>
