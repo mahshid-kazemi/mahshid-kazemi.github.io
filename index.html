@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mahshid Kazemi — Strategic HR Partner</title>
+<meta name="description" content="Strategic HR professional and Scrum Master with a Master’s in Psychology. Aligning people, culture and delivery.">
+<meta name="theme-color" content="#0a0d12">
+<meta property="og:title" content="Mahshid Kazemi — Strategic HR Partner">
+<meta property="og:description" content="HR Business Partner and Scrum Master with a Master’s in Psychology. Aligning people, culture and delivery.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0d12'/%3E%3Cpath d='M16 16 7 9M16 16l9-7M16 16v10' stroke='%23555' stroke-width='1'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23ff9d7a'/%3E%3Ccircle cx='7' cy='9' r='2.5' fill='%236ea8ff'/%3E%3Ccircle cx='25' cy='9' r='2.5' fill='%234fd1c5'/%3E%3Ccircle cx='16' cy='26' r='2.5' fill='%23f4c76a'/%3E%3C/svg%3E">
+<noscript><style>.reveal{opacity:1;transform:none}#bg{display:none}</style></noscript>
+<link rel="stylesheet" href="fonts/fonts.css">
+<style>
+:root {
+  --bg: #0a0d12; --fg: #ebe7df; --muted: #8d93a1; --line: rgba(255,255,255,.13); --accent: #ff9d7a;
+  --serif: 'Instrument Serif', Georgia, serif;
+}
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; color-scheme: dark; }
+body { background: var(--bg); color: var(--fg); font: 400 17px/1.65 Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+#bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; opacity: 0; transition: opacity 2s ease; }
+body.ready #bg { opacity: 1; }
+a { color: inherit; text-decoration: none; }
+.wrap { width: min(1180px, 100% - 48px); margin-inline: auto; }
+em { font-style: italic; color: var(--accent); }
+
+/* nav + progress */
+#bar { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); z-index: 20; }
+nav { position: fixed; inset: 0 0 auto; z-index: 10; background: linear-gradient(#0a0d12ee, #0a0d1200); }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+nav .brand { font: 400 22px var(--serif); letter-spacing: .01em; }
+nav ul { display: flex; gap: 32px; list-style: none; padding: 0; font-size: 13.5px; letter-spacing: .04em; color: var(--muted); }
+nav ul a { transition: color .2s; padding: 6px 0; border-bottom: 1px solid transparent; }
+nav ul a:hover, nav ul a.on { color: var(--fg); }
+nav ul a.on { border-color: var(--accent); }
+.pill { font-size: 13.5px; padding: 9px 20px; border: 1px solid var(--line); border-radius: 999px; transition: background .2s, border-color .2s; }
+.pill:hover { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.3); }
+@media (max-width: 900px) { nav ul { display: none; } }
+
+/* sections */
+section { min-height: 100svh; display: flex; align-items: center; padding: 120px 0 80px; }
+.col { max-width: 560px; }
+.right .col { margin-left: auto; }
+.eyebrow { display: flex; align-items: center; gap: 14px; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 26px; }
+.eyebrow::before { content: ''; width: 34px; height: 1px; background: var(--accent); }
+h1 { font: 400 clamp(64px, 10vw, 140px)/.92 var(--serif); letter-spacing: -.025em; }
+h2 { font: 400 clamp(36px, 4.6vw, 62px)/1.05 var(--serif); letter-spacing: -.015em; }
+h3 { font-size: 18px; font-weight: 500; line-height: 1.35; }
+p.lead { color: var(--muted); font-size: 18.5px; margin-top: 24px; }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 38px; }
+.btn { padding: 13px 26px; border-radius: 999px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--line); transition: background .2s, transform .2s; }
+.btn:hover { background: rgba(255,255,255,.07); transform: translateY(-2px); }
+.btn.p { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.btn.p:hover { background: #fff; }
+
+.now { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--muted); max-width: 520px; }
+.now b { display: block; color: var(--fg); font-weight: 500; font-size: 14.5px; margin-top: 2px; }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 44px; border-top: 1px solid var(--line); }
+.stat { padding: 22px 18px 0 0; }
+.stat + .stat { padding-left: 18px; border-left: 1px solid var(--line); }
+.stat b { display: block; font: 400 56px/1 var(--serif); }
+.stat span { display: block; margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--muted); }
+
+.job { display: grid; grid-template-columns: 118px 1fr; gap: 20px; padding: 30px 0; border-top: 1px solid var(--line); }
+.job:last-child { border-bottom: 1px solid var(--line); }
+.when { font-size: 13px; letter-spacing: .04em; color: var(--accent); padding-top: 4px; }
+.org { color: var(--muted); font-size: 14.5px; margin: 3px 0 12px; }
+.job p { color: #c4c2bd; font-size: 15.5px; }
+.job ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+.job li + li { margin-top: 5px; }
+@media (max-width: 600px) { .job { grid-template-columns: 1fr; gap: 6px; } }
+
+.skills { list-style: none; padding: 0; margin-top: 34px; }
+.skill { display: grid; grid-template-columns: 44px 1fr; padding: 20px 0 20px 16px; border-top: 1px solid var(--line); border-left: 2px solid transparent; opacity: .5; cursor: pointer; transition: opacity .35s, border-color .35s, background .35s; outline: none; }
+.skill:last-child { border-bottom: 1px solid var(--line); }
+.skill.on { opacity: 1; border-left-color: var(--c); background: linear-gradient(90deg, color-mix(in srgb, var(--c) 10%, transparent), transparent); }
+.skill .n { font: 400 18px var(--serif); color: var(--c); padding-top: 2px; }
+.skill p { color: var(--muted); font-size: 14.5px; margin-top: 4px; }
+
+.edu { display: grid; grid-template-columns: 118px 1fr; gap: 20px; padding: 26px 0; border-top: 1px solid var(--line); }
+.edu:last-of-type { border-bottom: 1px solid var(--line); }
+.edu .org { margin: 3px 0 0; }
+
+.contact .col { max-width: 760px; margin-inline: auto; text-align: center; }
+.contact .eyebrow { justify-content: center; }
+.contact .eyebrow::before { display: none; }
+.mail { display: inline-block; margin-top: 36px; font: 400 clamp(26px, 4vw, 44px) var(--serif); border-bottom: 1px solid var(--accent); padding-bottom: 4px; transition: color .2s; word-break: break-all; }
+.mail:hover { color: var(--accent); }
+.contact .btns { justify-content: center; }
+
+/* floating 3D labels */
+.lbl { position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none; opacity: 0; will-change: transform, opacity; }
+.lbl span { display: block; transform: translate(-50%, -135%); white-space: nowrap; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg); padding: 5px 11px; border-radius: 999px; background: rgba(10,13,18,.6); border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); backdrop-filter: blur(6px); }
+.lbl span::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--c); margin-right: 8px; vertical-align: 1px; }
+@media (max-width: 800px) { .lbl { display: none; } }
+
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s, transform .9s cubic-bezier(.2,.7,.2,1); }
+.reveal.in { opacity: 1; transform: none; }
+footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px 0 36px; }
+@media (max-width: 800px) { section { padding: 100px 0 60px; } .now { grid-template-columns: 1fr; }
+  .col { background: rgba(10,13,18,.62); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); padding: 20px; margin-inline: -20px; border-radius: 18px; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
+</style>
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+<div id="bar"></div>
+<div id="labels" aria-hidden="true"></div>
+
+<nav><div class="wrap">
+  <a class="brand" href="#hero">Mahshid Kazemi</a>
+  <ul>
+    <li><a href="#profile">Profile</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="pill" href="Mahshid-Kazemi-CV.pdf" download>Download CV</a>
+</div></nav>
+
+<main>
+  <section id="hero"><div class="wrap"><div class="col" style="max-width:720px">
+    <p class="eyebrow reveal">HR Business Partner · Scrum Master</p>
+    <h1 class="reveal"><em>Mahshid</em><br>Kazemi</h1>
+    <p class="lead reveal">Aligning people, culture and delivery — so teams can do their best work, sustainably.</p>
+    <div class="btns reveal">
+      <a class="btn p" href="#contact">Get in touch</a>
+      <a class="btn" href="#experience">View experience</a>
+    </div>
+    <div class="now reveal">
+      <div>Currently<b>HR Generalist, Iran Hotel Online</b></div>
+      <div>Previously<b>HRBP &amp; Scrum Master, Rohan Games</b></div>
+    </div>
+  </div></div></section>
+
+  <section id="profile" class="right"><div class="wrap"><div class="col">
+    <p class="eyebrow reveal">01 — Profile</p>
+    <h2 class="reveal">A bridge between leadership and <em>technical teams</em>.</h2>
+    <p class="lead reveal">Strategic HR professional and Master’s graduate in Psychology, working at the intersection of human behavior and organizational efficiency. Four years of full-cycle HR operations and business partnering, driving high-performance cultures through HRBP strategy and Agile methods.</p>
+    <div class="stats reveal">
+      <div class="stat"><b data-count="4" data-suffix="+">0</b><span>years in full-cycle HR</span></div>
+      <div class="stat"><b data-count="100" data-suffix="+">0</b><span>employees supported</span></div>
+      <div class="stat"><b data-count="20" data-suffix="%">0</b><span>faster time-to-productivity</span></div>
+    </div>
+  </div></div></section>
+
+  <section id="experience"><div class="wrap"><div class="col" style="max-width:640px">
+    <p class="eyebrow reveal">02 — Experience</p>
+    <h2 class="reveal" style="margin-bottom:34px">Scaling teams and <em>the way they work</em>.</h2>
+
+    <article class="job reveal">
+      <div class="when">2022 — Present</div>
+      <div>
+        <h3>HR Generalist / Strategic HR Partner</h3>
+        <div class="org">Iran Hotel Online · Tourism &amp; E-commerce</div>
+        <p>Helped scale the HR department and align people operations with the strategy of a leading e-commerce and hospitality platform of 100+ employees.</p>
+        <ul>
+          <li>End-to-end Talent Management, improving quality of hire and team alignment.</li>
+          <li>Employee relations and conflict mediation grounded in psychological frameworks.</li>
+          <li>Restructured onboarding and offboarding, cutting time-to-productivity by 20%.</li>
+          <li>Turnover analytics driving proactive retention strategies.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <div class="when">2025 — 2026</div>
+      <div>
+        <h3>HR Business Partner &amp; Scrum Master</h3>
+        <div class="org">Rohan Andisheh Sepidnam · Mobile game development</div>
+        <p>Integrated HRBP with Agile to optimize talent performance and project delivery in a high-growth game studio.</p>
+        <ul>
+          <li>Kept creative talent aligned with delivery milestones across the Agile production cycle.</li>
+          <li>Facilitated Daily Stand-ups, Sprint Planning and Retrospectives for cross-functional teams.</li>
+          <li>Coached teams and stakeholders on Agile values and psychological safety.</li>
+          <li>Advised leadership on workforce planning and developer retention under pressure.</li>
+        </ul>
+      </div>
+    </article>
+  </div></div></section>
+
+  <section id="skills"><div class="wrap"><div class="col" style="max-width:600px">
+    <p class="eyebrow reveal">03 — Core skills</p>
+    <h2 class="reveal">Four disciplines, <em>one network</em>.</h2>
+    <ul class="skills reveal">
+      <li class="skill" data-c="0" tabindex="0"><span class="n">01</span><div><h3>HR Strategy</h3><p>HR Business Partnering · Strategic Workforce Planning · Performance Management (OKR / KPI)</p></div></li>
+      <li class="skill" data-c="1" tabindex="0"><span class="n">02</span><div><h3>Agile Management</h3><p>Scrum Master · Agile Coaching · Jira / Trello · Process Optimization</p></div></li>
+      <li class="skill" data-c="2" tabindex="0"><span class="n">03</span><div><h3>People &amp; Culture</h3><p>Talent Acquisition · Employer Branding · Employee Engagement · Organizational Development</p></div></li>
+      <li class="skill" data-c="3" tabindex="0"><span class="n">04</span><div><h3>Behavioral Science</h3><p>Conflict Resolution &amp; Mediation · Psychological Safety · Interpersonal Assessment</p></div></li>
+    </ul>
+  </div></div></section>
+
+  <section id="education"><div class="wrap"><div class="col">
+    <p class="eyebrow reveal">04 — Education</p>
+    <h2 class="reveal" style="margin-bottom:34px">Grounded in <em>psychology</em>.</h2>
+    <div class="edu reveal"><div class="when">2022 — 2024</div><div><h3>M.S. in Psychology</h3><div class="org">Islamic Azad University</div></div></div>
+    <div class="edu reveal"><div class="when">2018 — 2022</div><div><h3>B.S.</h3><div class="org">Ferdowsi University of Mashhad</div></div></div>
+  </div></div></section>
+
+  <section id="contact" class="contact"><div class="wrap"><div class="col">
+    <p class="eyebrow reveal">05 — Contact</p>
+    <h2 class="reveal">Let’s build a healthier, <em>higher-performing</em> workplace.</h2>
+    <a class="mail reveal" href="mailto:kazemi.mahshid75@gmail.com">kazemi.mahshid75@gmail.com</a>
+    <div class="btns reveal">
+      <a class="btn" href="https://linkedin.com/in/mahshid-kazemi" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="tel:+989151234618">+98 915 123 4618</a>
+      <a class="btn p" href="Mahshid-Kazemi-CV.pdf" download>Download CV</a>
+    </div>
+  </div></div></section>
+</main>
+<footer>© Mahshid Kazemi</footer>
+
+<script type="importmap">{"imports":{
+  "three":"./vendor/three/build/three.module.js",
+  "three/addons/":"./vendor/three/examples/jsm/"}}</script>
+<script type="module">
+import * as THREE from 'three';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mobile = () => innerWidth < 800;
+
+/* ---------- reveal + counters ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  e.target.classList.add('in'); io.unobserve(e.target);
+  e.target.querySelectorAll('[data-count]').forEach(count);
+}), { threshold: .2 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+function count(el) {
+  const to = +el.dataset.count, sfx = el.dataset.suffix || '', t0 = performance.now();
+  (function step(t) {
+    const k = reduce ? 1 : Math.min((t - t0) / 1400, 1);
+    el.textContent = Math.round(to * (1 - (1 - k) ** 3)) + sfx;
+    if (k < 1) requestAnimationFrame(step);
+  })(t0);
+}
+
+/* ---------- the organisation as a network ---------- */
+try {
+const V = THREE.Vector3, BG = 0x0a0d12;
+const canvas = document.getElementById('bg');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(BG);
+scene.fog = new THREE.Fog(BG, 26, 62);
+const camera = new THREE.PerspectiveCamera(45, 1, .1, 120);
+
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(1, 1), .55, .7, .2);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+const seed = a => () => {                    // mulberry32: same layout every load
+  a = a + 0x6D2B79F5 | 0;
+  let t = Math.imul(a ^ a >>> 15, 1 | a);
+  t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
+  return ((t ^ t >>> 14) >>> 0) / 4294967296;
+};
+const rnd = seed(7);
+const unit = () => { let v; do v = new V(rnd(), rnd(), rnd()).multiplyScalar(2).subScalar(1); while (v.lengthSq() > 1 || v.lengthSq() < .01); return v.normalize(); };
+
+const glow = (() => {
+  const c = document.createElement('canvas'); c.width = c.height = 64;
+  const g = c.getContext('2d'), r = g.createRadialGradient(32, 32, 0, 32, 32, 32);
+  r.addColorStop(0, '#fff'); r.addColorStop(.25, '#fffa'); r.addColorStop(1, '#fff0');
+  g.fillStyle = r; g.fillRect(0, 0, 64, 64);
+  return new THREE.CanvasTexture(c);
+})();
+const add = { transparent: true, depthWrite: false, blending: THREE.AdditiveBlending };
+
+// four skill areas = four teams, each a cluster of people around a hub
+const CL = [['HR Strategy', '#6ea8ff'], ['Agile Management', '#4fd1c5'], ['People & Culture', '#ff9d7a'], ['Behavioral Science', '#f4c76a']]
+  .map(([name, hex], i) => ({ name, color: new THREE.Color(hex), i, f: .9 }));
+const POOL = [];                              // edges pulses can travel: [a, b, cluster | -1]
+const core = new V(0, 0, 0);
+const labels = [];
+
+CL.forEach(c => {
+  const a = Math.PI / 4 + c.i * Math.PI / 2;
+  c.center = new V(Math.sin(a) * 7.5, (c.i % 2 ? 1.3 : -1.3), Math.cos(a) * 7.5);
+  const n = 58, P = [c.center.clone()];
+  for (let k = 1; k < n; k++) P.push(unit().multiplyScalar(3 * Math.pow(rnd(), .6)).multiply(new V(1, .8, 1)).add(c.center));
+  c.P = P;
+
+  const mesh = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 14, 14), new THREE.MeshBasicMaterial(), n);
+  const m = new THREE.Matrix4();
+  P.forEach((p, k) => {
+    m.compose(p, new THREE.Quaternion(), new V(1, 1, 1).multiplyScalar(k ? .06 + rnd() * .09 : .34));
+    mesh.setMatrixAt(k, m);
+    mesh.setColorAt(k, c.color.clone().offsetHSL(0, 0, (rnd() - .5) * .18));
+  });
+  c.nodes = mesh;
+
+  const seg = [];
+  P.forEach((p, k) => {
+    if (!k) return;
+    P.map((q, j) => [j, p.distanceToSquared(q)]).filter(([j]) => j !== k).sort((x, y) => x[1] - y[1]).slice(0, 2)
+      .forEach(([j]) => seg.push(p, P[j]));
+    if (rnd() < .3) { seg.push(p, P[0]); POOL.push([P[0], p, c.i]); }
+  });
+  c.lines = new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(seg), new THREE.LineBasicMaterial({ ...add, opacity: .42 }));
+  c.hub = new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints([core, c.center]), new THREE.LineBasicMaterial({ ...add, opacity: .7 }));
+  for (let r = 0; r < 4; r++) POOL.push([core, c.center, -1]);
+  c.halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: glow, color: c.color, ...add, opacity: .6 }));
+  c.halo.position.copy(c.center); c.halo.scale.setScalar(3.4);
+  scene.add(mesh, c.lines, c.hub, c.halo);
+
+  const el = document.createElement('div');
+  el.className = 'lbl'; el.style.setProperty('--c', '#' + c.color.getHexString());
+  el.innerHTML = `<span>${c.name}</span>`;
+  document.getElementById('labels').append(el);
+  labels.push({ el, at: c.center.clone().add(new V(0, .5, 0)), c: c.i });
+});
+
+// bridges between teams: the HR partner's real job
+const bridge = [];
+CL.forEach(c => { const o = CL[(c.i + 1) % 4]; for (let k = 0; k < 6; k++) bridge.push(c.P[1 + (rnd() * 57 | 0)], o.P[1 + (rnd() * 57 | 0)]); });
+scene.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(bridge), new THREE.LineBasicMaterial({ ...add, color: 0xcfd6ff, opacity: .1 })));
+
+// the HRBP at the centre
+const centre = new THREE.Mesh(new THREE.SphereGeometry(.55, 32, 32), new THREE.MeshBasicMaterial({ color: 0xfff1e6 }));
+const centreHalo = new THREE.Sprite(new THREE.SpriteMaterial({ map: glow, color: 0xffb48f, ...add, opacity: .45 }));
+centreHalo.scale.setScalar(5);
+const rings = [0, 1].map(i => {
+  const r = new THREE.Mesh(new THREE.TorusGeometry(1.15 + i * .45, .012, 8, 160), new THREE.MeshBasicMaterial({ color: 0xffd9c4, ...add, opacity: .55 }));
+  r.rotation.set(1.2 + i * .9, i * .7, 0); return r;
+});
+scene.add(centre, centreHalo, ...rings);
+labels.push({ el: Object.assign(document.createElement('div'), { className: 'lbl', innerHTML: '<span>HR Business Partner</span>' }), at: new V(0, .7, 0), c: -1 });
+labels.at(-1).el.style.setProperty('--c', '#ffb48f'); document.getElementById('labels').append(labels.at(-1).el);
+
+// ambient dust for depth
+const dust = new THREE.Points(new THREE.BufferGeometry().setFromPoints(Array.from({ length: 450 }, () => unit().multiplyScalar(14 + rnd() * 30))),
+  new THREE.PointsMaterial({ size: .09, color: 0x8d93a1, ...add, opacity: .55 }));
+scene.add(dust);
+
+// pulses: messages travelling the network
+const NP = 40, pPos = new Float32Array(NP * 3), pCol = new Float32Array(NP * 3);
+const pulses = Array.from({ length: NP }, () => ({ e: POOL[rnd() * POOL.length | 0], t: rnd(), s: .25 + rnd() * .35, d: rnd() < .5 }));
+const pGeo = new THREE.BufferGeometry();
+pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3).setUsage(THREE.DynamicDrawUsage));
+pGeo.setAttribute('color', new THREE.BufferAttribute(pCol, 3).setUsage(THREE.DynamicDrawUsage));
+scene.add(new THREE.Points(pGeo, new THREE.PointsMaterial({ size: .55, map: glow, vertexColors: true, ...add })));
+
+/* ---------- scroll story ---------- */
+// d = distance, az/el = orbit angles, off = horizontal framing (+ pushes the network right, away from left-aligned text)
+const SEC = [
+  { d: 33, az: 0,   el: .32, off: .22, lbl: 1, sp: 1 },    // hero: whole organisation
+  { d: 23, az: 2.3, el: .12, off: -.27, lbl: 0, sp: 1.6, ctr: 1, dim: .85 },  // profile: the partner at the centre
+  { d: 28, az: 3.7, el: .32, off: .27, lbl: 0, sp: 1.3, dim: .85 },  // experience
+  { d: 30, az: 0,   el: .2,  off: .22, lbl: 1, sp: 1, skills: 1 }, // skills: fly to each team
+  { d: 24, az: 5.1, el: .15, off: .22, lbl: 0, sp: 1 },    // education
+  { d: 26, az: 6.9, el: .3,  off: 0,   lbl: 0, sp: 1.6, dim: .4 },  // contact
+];
+const secs = [...document.querySelectorAll('main section')];
+const navA = [...document.querySelectorAll('nav ul a')];
+const rows = [...document.querySelectorAll('.skill')];
+let tops = [], hover = -1, lastFc = -2, lastIdx = -1;
+rows.forEach(r => {
+  r.style.setProperty('--c', '#' + CL[r.dataset.c].color.getHexString());
+  const on = () => hover = +r.dataset.c;
+  r.addEventListener('pointerenter', on); r.addEventListener('focus', on); r.addEventListener('click', on);
+  r.addEventListener('pointerleave', () => hover = -1); r.addEventListener('blur', () => hover = -1);
+});
+
+const ptr = { x: 0, y: 0 };
+addEventListener('pointermove', e => { ptr.x = e.clientX / innerWidth - .5; ptr.y = e.clientY / innerHeight - .5; });
+function resize() {
+  const w = innerWidth, h = innerHeight;
+  renderer.setSize(w, h, false); composer.setSize(w, h);
+  camera.aspect = w / h; camera.updateProjectionMatrix();
+  tops = secs.map(s => s.offsetTop);
+}
+addEventListener('resize', resize); resize();
+document.fonts?.ready.then(resize); addEventListener('load', resize);
+
+const cam = { dim: 1, az: -1.4, el: .75, d: 70, ctr: 0, off: 0, f: new V(), lbl: 0 };
+const wrap = (a, ref) => a + Math.round((ref - a) / (2 * Math.PI)) * 2 * Math.PI;
+const tmp = new V(), col = new THREE.Color(), clock = new THREE.Clock(), bar = document.getElementById('bar');
+
+renderer.setAnimationLoop(() => {
+  const dt = Math.min(clock.getDelta(), .05), t = clock.elapsedTime, k = 1 - Math.exp(-dt * (t < 3 ? 1.3 : 2.6)), m = mobile();
+  const mid = scrollY + innerHeight * .5;
+  const idx = Math.max(0, tops.findIndex((_, i) => i === tops.length - 1 || mid < tops[i + 1]));
+  const S = SEC[idx];
+  if (idx !== lastIdx) { navA.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + secs[idx].id)); lastIdx = idx; }
+  bar.style.transform = `scaleX(${scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight)})`;
+
+  // which team is in focus (skills: hover, otherwise auto-tour)
+  const fc = S.skills ? (hover >= 0 ? hover : reduce ? 0 : Math.floor(t / 4) % 4) : -1;
+  if (fc !== lastFc) { rows.forEach((r, i) => r.classList.toggle('on', i === fc)); lastFc = fc; }
+
+  // camera target
+  const T = { d: S.d, az: S.az, el: S.el, f: core };
+  if (fc >= 0) { const c = CL[fc].center; T.f = c; T.d = 10; T.az = Math.atan2(c.x, c.z) + .5; T.el = .2; }
+  T.d *= m ? 1.3 : Math.max(1, 1.6 / camera.aspect);
+  cam.az += (wrap(T.az, cam.az) - cam.az) * k; cam.el += (T.el - cam.el) * k; cam.d += (T.d - cam.d) * k;
+  cam.f.lerp(T.f, k); cam.off += ((m ? 0 : S.off) - cam.off) * k; cam.lbl += (S.lbl - cam.lbl) * k; cam.ctr += ((S.ctr || 0) - cam.ctr) * k; cam.dim += ((S.dim || 1) - cam.dim) * k;
+
+  const az = cam.az + (reduce ? 0 : t * .035) + ptr.x * .25, el = cam.el - ptr.y * .12;
+  camera.position.set(Math.sin(az) * Math.cos(el), Math.sin(el), Math.cos(az) * Math.cos(el)).multiplyScalar(cam.d).add(cam.f);
+  camera.lookAt(cam.f);
+  camera.setViewOffset(innerWidth, innerHeight, -cam.off * innerWidth, 0, innerWidth, innerHeight);
+  camera.updateMatrixWorld();
+
+  // dim the teams that are not in focus
+  const g = (m ? .38 : 1) * cam.dim;
+  CL.forEach(c => {
+    c.f += ((fc < 0 ? .9 : c.i === fc ? 1.3 : .14) - c.f) * k;
+    c.nodes.material.color.setScalar(c.f * g);
+    c.lines.material.color.copy(c.color).multiplyScalar(c.f * g);
+    c.hub.material.color.copy(c.color).multiplyScalar(c.f * g);
+    c.halo.material.opacity = .5 * c.f * g;
+  });
+  centreHalo.material.opacity = .45 * g; centre.material.color.setScalar(g);
+  rings.forEach((r, i) => { r.rotation.z += dt * (reduce ? 0 : .35 + i * .2); r.material.opacity = .55 * g; });
+
+  // pulses
+  pulses.forEach((p, i) => {
+    p.t += dt * p.s * S.sp * (reduce ? 0 : 1);
+    if (p.t >= 1) { p.t = 0; p.e = POOL[rnd() * POOL.length | 0]; p.d = rnd() < .5; }
+    const [a, b, ci] = p.e;
+    tmp.lerpVectors(p.d ? a : b, p.d ? b : a, p.t).toArray(pPos, i * 3);
+    (ci < 0 ? col.set(0xffd9c4).multiplyScalar(g) : col.copy(CL[ci].color).multiplyScalar(1.4 * CL[ci].f * g)).toArray(pCol, i * 3);
+  });
+  pGeo.attributes.position.needsUpdate = pGeo.attributes.color.needsUpdate = true;
+
+  // HTML labels pinned to the 3D hubs
+  labels.forEach(({ el, at, c }) => {
+    tmp.copy(at).project(camera);
+    const vis = tmp.z < 1 ? (c < 0 ? cam.ctr : cam.lbl * (fc < 0 || c === fc ? 1 : .25)) : 0;
+    el.style.opacity = vis.toFixed(2);
+    el.style.transform = `translate(${((tmp.x * .5 + .5) * innerWidth).toFixed(1)}px,${((-tmp.y * .5 + .5) * innerHeight).toFixed(1)}px)`;
+  });
+
+  composer.render();
+  document.body.classList.add('ready');
+});
+} catch (err) { console.warn('WebGL unavailable, showing static page.', err); }
+</script>
+</body>
+</html>
