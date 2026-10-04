@@ -11,4 +11,5 @@ Single-page portfolio built from `Mahshid-Kazemi-CV.pdf`. One file, no build ste
   Per-section camera targets live in the `SEC` array; skills rows (`.skill[data-c]`) focus a cluster.
 - Layout is text on one side, network on the other (`off` in `SEC`); mobile dims the scene and adds a scrim.
 - Sections: hero, profile, experience, approach, skills, education, contact (order must match the `SEC` array in the script).
+- Scrolling: a small script snaps one section per wheel/swipe/key (700ms ease, then 300ms input lock: `LOCK`/`DUR`). Sections taller than the viewport scroll natively until their edge.
 - Open item: B.S. field of study is missing from the source resume.

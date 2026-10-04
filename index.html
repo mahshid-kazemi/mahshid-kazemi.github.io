@@ -18,7 +18,7 @@
   --serif: 'Fraunces', Georgia, serif; --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 * { box-sizing: border-box; margin: 0; }
-html { scroll-behavior: smooth; color-scheme: dark; }
+html { scroll-behavior: smooth; color-scheme: dark; overscroll-behavior-y: none; }
 body { background: var(--bg); color: var(--fg); font: 400 16.5px/1.7 var(--sans); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
 #bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; opacity: 0; transition: opacity 2s ease; }
 body.ready #bg { opacity: 1; }
@@ -355,6 +355,87 @@ footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10
   addEventListener('pointerup', e => { down = false; e.pointerType === 'mouse' ? aim(e, false) : release(e); });
   addEventListener('pointercancel', e => { down = false; release(e); });   // finger started scrolling: let go
   document.addEventListener('mouseout', e => { if (!e.relatedTarget) P = null; });   // mouse left the window
+})();
+</script>
+<script>
+/* Section snapping: one scroll gesture = one section. Eased jump, then input is locked for LOCK ms.
+   Sections taller than the viewport still scroll natively until their edge is reached. */
+(() => {
+  const secs = [...document.querySelectorAll('main section')];
+  const LOCK = 300, DUR = 700, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let locked = false, lastWheel = 0, lastAbs = 0;
+  const top = i => secs[i].offsetTop;
+  const max = () => Math.max(0, document.documentElement.scrollHeight - innerHeight);
+  const cur = () => { const m = scrollY + innerHeight / 2; let k = 0; secs.forEach((_, i) => { if (top(i) <= m) k = i; }); return k; };
+  const tall = i => secs[i].offsetHeight > innerHeight + 40;   // taller than the screen: scroll natively through it
+
+  // where should a step in direction dir go?  number = target, null = let the browser scroll, undefined = nowhere to go
+  function step(dir) {
+    const i = cur(), y = scrollY, t0 = top(i);
+    if (dir > 0) {
+      if (tall(i) && t0 + secs[i].offsetHeight - innerHeight - y > 4) return null;
+      const t = i < secs.length - 1 ? top(i + 1) : max();
+      return t - y > 4 ? t : undefined;
+    }
+    if (y - t0 > 4) return tall(i) ? null : t0;
+    return i ? (tall(i - 1) ? Math.max(top(i - 1), t0 - innerHeight) : top(i - 1)) : undefined;
+  }
+
+  function go(to) {
+    locked = true;
+    const from = scrollY, t0 = performance.now(), dur = reduce ? 0 : DUR;
+    const ease = k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;   // easeInOutCubic
+    (function frame(t) {
+      const k = dur ? Math.min((t - t0) / dur, 1) : 1;
+      scrollTo({ top: from + (to - from) * ease(k), behavior: 'instant' });
+      if (k < 1) requestAnimationFrame(frame); else setTimeout(() => locked = false, LOCK);
+    })(t0);
+  }
+
+  addEventListener('wheel', e => {
+    if (e.ctrlKey || Math.abs(e.deltaY) < 4) return;            // pinch-zoom / sideways scroll
+    const now = performance.now(), a = Math.abs(e.deltaY);
+    const fresh = now - lastWheel > 120 || a > lastAbs * 1.3;   // a new gesture, not a trackpad's inertia tail
+    lastWheel = now; lastAbs = a;
+    if (locked) return e.preventDefault();
+    const t = step(Math.sign(e.deltaY));
+    if (t === null) return;
+    e.preventDefault();
+    if (t !== undefined && fresh) go(t);
+  }, { passive: false });
+
+  let y0 = 0;
+  addEventListener('touchstart', e => { y0 = e.touches[0].clientY; }, { passive: true });
+  addEventListener('touchmove', e => {                          // stop the native scroll only where we will snap
+    const dir = Math.sign(y0 - e.touches[0].clientY);
+    if (e.cancelable && dir && (locked || step(dir) !== null)) e.preventDefault();
+  }, { passive: false });
+  addEventListener('touchend', e => {
+    const dy = y0 - e.changedTouches[0].clientY;
+    if (Math.abs(dy) < 50 || locked) return;
+    const t = step(Math.sign(dy));
+    if (t != null) go(t);
+  }, { passive: true });
+
+  addEventListener('keydown', e => {
+    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (e.key === ' ' && e.target !== document.body) return;    // let focused buttons/links keep Space
+    const dir = { ArrowDown: 1, PageDown: 1, ' ': e.shiftKey ? -1 : 1, ArrowUp: -1, PageUp: -1 }[e.key];
+    if (e.key === 'Home' || e.key === 'End') { e.preventDefault(); if (!locked) go(e.key === 'Home' ? 0 : max()); return; }
+    if (!dir) return;
+    const t = locked ? undefined : step(dir);
+    if (t === null) return;
+    e.preventDefault();
+    if (t !== undefined) go(t);
+  });
+
+  document.addEventListener('click', e => {                     // nav links use the same eased jump
+    const a = e.target.closest('a[href^="#"]');
+    const i = a ? secs.findIndex(s => '#' + s.id === a.getAttribute('href')) : -1;
+    if (i < 0) return;
+    e.preventDefault();
+    if (!locked) go(top(i));
+  });
 })();
 </script>
 <script type="importmap">{"imports":{
