@@ -9,16 +9,17 @@
 <meta property="og:title" content="Mahshid Kazemi — Strategic HR Partner">
 <meta property="og:description" content="HR Business Partner and Scrum Master with a Master’s in Psychology. Aligning people, culture and delivery.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0d12'/%3E%3Cpath d='M16 16 7 9M16 16l9-7M16 16v10' stroke='%23555' stroke-width='1'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23ff9d7a'/%3E%3Ccircle cx='7' cy='9' r='2.5' fill='%236ea8ff'/%3E%3Ccircle cx='25' cy='9' r='2.5' fill='%234fd1c5'/%3E%3Ccircle cx='16' cy='26' r='2.5' fill='%23f4c76a'/%3E%3C/svg%3E">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mahshid Kazemi","jobTitle":"HR Business Partner & Scrum Master","description":"Strategic HR professional with a Master’s in Psychology.","sameAs":["https://linkedin.com/in/mahshid-kazemi"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Islamic Azad University"},{"@type":"CollegeOrUniversity","name":"Ferdowsi University of Mashhad"}]}</script>
 <noscript><style>.reveal{opacity:1;transform:none}#bg{display:none}</style></noscript>
 <link rel="stylesheet" href="fonts/fonts.css">
 <style>
 :root {
   --bg: #0a0d12; --fg: #ebe7df; --muted: #8d93a1; --line: rgba(255,255,255,.13); --accent: #ff9d7a;
-  --serif: 'Instrument Serif', Georgia, serif;
+  --serif: 'Fraunces', Georgia, serif; --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 * { box-sizing: border-box; margin: 0; }
 html { scroll-behavior: smooth; color-scheme: dark; }
-body { background: var(--bg); color: var(--fg); font: 400 17px/1.65 Inter, system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+body { background: var(--bg); color: var(--fg); font: 400 16.5px/1.7 var(--sans); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
 #bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; opacity: 0; transition: opacity 2s ease; }
 body.ready #bg { opacity: 1; }
 a { color: inherit; text-decoration: none; }
@@ -37,7 +38,7 @@ h1 em { animation: glow 4.5s ease-in-out 1.8s infinite; }
 #bar { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); z-index: 20; }
 nav { position: fixed; inset: 0 0 auto; z-index: 10; background: linear-gradient(#0a0d12ee, #0a0d1200); }
 nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-nav .brand { font: 400 22px var(--serif); letter-spacing: .01em; }
+nav .brand { font: 380 21px var(--serif); letter-spacing: -.01em; }
 nav ul { display: flex; gap: 32px; list-style: none; padding: 0; font-size: 13.5px; letter-spacing: .04em; color: var(--muted); }
 nav ul a { transition: color .2s; padding: 6px 0; border-bottom: 1px solid transparent; }
 nav ul a:hover, nav ul a.on { color: var(--fg); }
@@ -52,10 +53,10 @@ section { min-height: 100svh; display: flex; align-items: center; padding: 120px
 .right .col { margin-left: auto; }
 .eyebrow { display: flex; align-items: center; gap: 14px; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 26px; }
 .eyebrow::before { content: ''; width: 34px; height: 1px; background: var(--accent); }
-h1 { font: 400 clamp(64px, 10vw, 140px)/.92 var(--serif); letter-spacing: -.025em; }
-h2 { font: 400 clamp(36px, 4.6vw, 62px)/1.05 var(--serif); letter-spacing: -.015em; }
-h3 { font-size: 18px; font-weight: 500; line-height: 1.35; }
-p.lead { color: var(--muted); font-size: 18.5px; margin-top: 24px; }
+h1 { font: 330 clamp(58px, 9.2vw, 128px)/.95 var(--serif); letter-spacing: -.035em; }
+h2 { font: 340 clamp(34px, 4.4vw, 58px)/1.08 var(--serif); letter-spacing: -.025em; }
+h3 { font-size: 17px; font-weight: 600; line-height: 1.35; letter-spacing: -.005em; }
+p.lead { color: var(--muted); font-size: 18px; margin-top: 24px; max-width: 540px; }
 .btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 38px; }
 .btn { padding: 13px 26px; border-radius: 999px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--line); transition: background .2s, transform .2s; }
 .btn:hover { background: rgba(255,255,255,.07); transform: translateY(-2px); }
@@ -68,12 +69,12 @@ p.lead { color: var(--muted); font-size: 18.5px; margin-top: 24px; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 44px; border-top: 1px solid var(--line); }
 .stat { padding: 22px 18px 0 0; }
 .stat + .stat { padding-left: 18px; border-left: 1px solid var(--line); }
-.stat b { display: block; font: 400 56px/1 var(--serif); }
+.stat b { display: block; font: 330 56px/1 var(--serif); letter-spacing: -.03em; }
 .stat span { display: block; margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--muted); }
 
 .job { display: grid; grid-template-columns: 118px 1fr; gap: 20px; padding: 30px 0; border-top: 1px solid var(--line); }
 .job:last-child { border-bottom: 1px solid var(--line); }
-.when { font-size: 13px; letter-spacing: .04em; color: var(--accent); padding-top: 4px; }
+.when { font-size: 12.5px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); padding-top: 4px; }
 .org { color: var(--muted); font-size: 14.5px; margin: 3px 0 12px; }
 .job p { color: #c4c2bd; font-size: 15.5px; }
 .job ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
@@ -84,7 +85,7 @@ p.lead { color: var(--muted); font-size: 18.5px; margin-top: 24px; }
 .skill { display: grid; grid-template-columns: 44px 1fr; padding: 20px 0 20px 16px; border-top: 1px solid var(--line); border-left: 2px solid transparent; opacity: .5; cursor: pointer; transition: opacity .35s, border-color .35s, background .35s; outline: none; }
 .skill:last-child { border-bottom: 1px solid var(--line); }
 .skill.on { opacity: 1; border-left-color: var(--c); background: linear-gradient(90deg, color-mix(in srgb, var(--c) 10%, transparent), transparent); }
-.skill .n { font: 400 18px var(--serif); color: var(--c); padding-top: 2px; }
+.skill .n { font: 400 18px var(--serif); font-style: italic; color: var(--c); padding-top: 2px; }
 .skill p { color: var(--muted); font-size: 14.5px; margin-top: 4px; }
 
 .edu { display: grid; grid-template-columns: 118px 1fr; gap: 20px; padding: 26px 0; border-top: 1px solid var(--line); }
@@ -94,9 +95,30 @@ p.lead { color: var(--muted); font-size: 18.5px; margin-top: 24px; }
 .contact .col { max-width: 760px; margin-inline: auto; text-align: center; }
 .contact .eyebrow { justify-content: center; }
 .contact .eyebrow::before { display: none; }
-.mail { display: inline-block; margin-top: 36px; font: 400 clamp(26px, 4vw, 44px) var(--serif); border-bottom: 1px solid var(--accent); padding-bottom: 4px; transition: color .2s; word-break: break-all; }
+.mail { display: inline-block; margin-top: 36px; font: 340 clamp(24px, 3.8vw, 42px) var(--serif); letter-spacing: -.02em; border-bottom: 1px solid var(--accent); padding-bottom: 4px; transition: color .2s; word-break: break-all; }
 .mail:hover { color: var(--accent); }
 .contact .btns { justify-content: center; }
+
+/* details */
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+.tags span { font-size: 12.5px; padding: 4px 11px; border-radius: 999px; border: 1px solid var(--line); color: #c9c6bf; background: rgba(255,255,255,.03); transition: border-color .35s; }
+.skill.on .tags span { border-color: color-mix(in srgb, var(--c) 50%, transparent); }
+.note { margin-top: 18px; font-size: 13px; color: var(--muted); }
+.hint { margin-top: 20px; font-size: 12.5px; letter-spacing: .04em; color: var(--muted); transition: opacity .8s; }
+.hint::before { content: '✦'; color: var(--accent); margin-right: 8px; }
+body.played .hint { opacity: 0; }
+#hero { position: relative; }
+.cue { position: absolute; bottom: 30px; left: max(24px, calc((100% - 1180px) / 2)); display: flex; align-items: center; gap: 14px; font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
+.cue::before { content: ''; width: 1px; height: 40px; background: linear-gradient(var(--accent), transparent); transform-origin: top; animation: drip 2.2s ease-in-out infinite; }
+@keyframes drip { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
+.pr { display: grid; grid-template-columns: 44px 1fr; padding: 22px 0; border-top: 1px solid var(--line); }
+.pr:last-of-type { border-bottom: 1px solid var(--line); }
+.pr .n { font: italic 400 20px var(--serif); color: var(--accent); }
+.pr p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+button.btn { background: none; color: inherit; font-family: inherit; cursor: pointer; }
+footer a { border-bottom: 1px solid var(--line); transition: color .2s, border-color .2s; }
+footer a:hover { color: var(--fg); border-color: var(--accent); }
+@media (max-width: 800px) { .cue { display: none; } }
 
 /* floating 3D labels */
 .lbl { position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none; opacity: 0; will-change: transform, opacity; }
@@ -106,7 +128,7 @@ p.lead { color: var(--muted); font-size: 18.5px; margin-top: 24px; }
 
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s, transform .9s cubic-bezier(.2,.7,.2,1); }
 .reveal.in { opacity: 1; transform: none; }
-footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px 0 36px; }
+footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px; color: var(--muted); font-size: 13px; padding: 28px 0 40px; border-top: 1px solid var(--line); }
 @media (max-width: 800px) { section { padding: 100px 0 60px; } .now { grid-template-columns: 1fr; }
   .col { background: rgba(10,13,18,.62); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); padding: 20px; margin-inline: -20px; border-radius: 18px; } }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
@@ -122,6 +144,7 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px
   <ul>
     <li><a href="#profile">Profile</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#approach">Approach</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -133,6 +156,7 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px
   <section id="hero"><div class="wrap"><div class="col" style="max-width:720px">
     <p class="eyebrow reveal">HR Business Partner · Scrum Master</p>
     <h1><em>Mahshid</em><br>Kazemi</h1>
+    <p class="hint reveal">Hover or tap the name</p>
     <p class="lead reveal">Aligning people, culture and delivery — so teams can do their best work, sustainably.</p>
     <div class="btns reveal">
       <a class="btn p" href="#contact">Get in touch</a>
@@ -142,7 +166,9 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px
       <div>Currently<b>HR Generalist, Iran Hotel Online</b></div>
       <div>Previously<b>HRBP &amp; Scrum Master, Rohan Games</b></div>
     </div>
-  </div></div></section>
+  </div></div>
+    <a class="cue" href="#profile">Scroll</a>
+  </section>
 
   <section id="profile" class="right"><div class="wrap"><div class="col">
     <p class="eyebrow reveal">01 — Profile</p>
@@ -171,6 +197,7 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px
           <li>Restructured onboarding and offboarding, cutting time-to-productivity by 20%.</li>
           <li>Turnover analytics driving proactive retention strategies.</li>
         </ul>
+        <div class="tags"><span>Talent Management</span><span>Employee Relations</span><span>Onboarding</span><span>Retention Analytics</span><span>100+ employees</span></div>
       </div>
     </article>
 
@@ -186,40 +213,53 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px
           <li>Coached teams and stakeholders on Agile values and psychological safety.</li>
           <li>Advised leadership on workforce planning and developer retention under pressure.</li>
         </ul>
+        <div class="tags"><span>HRBP</span><span>Scrum</span><span>Agile Coaching</span><span>Workforce Planning</span><span>Developer Retention</span></div>
       </div>
     </article>
   </div></div></section>
 
+  <section id="approach" class="right"><div class="wrap"><div class="col">
+    <p class="eyebrow reveal">03 — Approach</p>
+    <h2 class="reveal">People first, <em>measured</em> and moving at the speed of delivery.</h2>
+    <div style="margin-top:34px">
+      <div class="pr reveal"><span class="n">i.</span><div><h3>Psychology-led</h3><p>Conflict, culture and engagement handled with psychological frameworks, so teams feel safe to speak up.</p></div></div>
+      <div class="pr reveal"><span class="n">ii.</span><div><h3>Data-informed</h3><p>Turnover, retention and time-to-productivity are tracked and acted on, not guessed.</p></div></div>
+      <div class="pr reveal"><span class="n">iii.</span><div><h3>Agile by default</h3><p>HR that keeps pace with production: stand-ups, sprints and retrospectives, with leadership kept in the loop.</p></div></div>
+    </div>
+  </div></div></section>
+
   <section id="skills"><div class="wrap"><div class="col" style="max-width:600px">
-    <p class="eyebrow reveal">03 — Core skills</p>
+    <p class="eyebrow reveal">04 — Core skills</p>
     <h2 class="reveal">Four disciplines, <em>one network</em>.</h2>
     <ul class="skills reveal">
-      <li class="skill" data-c="0" tabindex="0"><span class="n">01</span><div><h3>HR Strategy</h3><p>HR Business Partnering · Strategic Workforce Planning · Performance Management (OKR / KPI)</p></div></li>
-      <li class="skill" data-c="1" tabindex="0"><span class="n">02</span><div><h3>Agile Management</h3><p>Scrum Master · Agile Coaching · Jira / Trello · Process Optimization</p></div></li>
-      <li class="skill" data-c="2" tabindex="0"><span class="n">03</span><div><h3>People &amp; Culture</h3><p>Talent Acquisition · Employer Branding · Employee Engagement · Organizational Development</p></div></li>
-      <li class="skill" data-c="3" tabindex="0"><span class="n">04</span><div><h3>Behavioral Science</h3><p>Conflict Resolution &amp; Mediation · Psychological Safety · Interpersonal Assessment</p></div></li>
+      <li class="skill" data-c="0" tabindex="0"><span class="n">01</span><div><h3>HR Strategy</h3><div class="tags"><span>HR Business Partnering</span><span>Strategic Workforce Planning</span><span>Performance Management (OKR / KPI)</span></div></div></li>
+      <li class="skill" data-c="1" tabindex="0"><span class="n">02</span><div><h3>Agile Management</h3><div class="tags"><span>Scrum Master</span><span>Agile Coaching</span><span>Jira / Trello</span><span>Process Optimization</span></div></div></li>
+      <li class="skill" data-c="2" tabindex="0"><span class="n">03</span><div><h3>People &amp; Culture</h3><div class="tags"><span>Talent Acquisition</span><span>Employer Branding</span><span>Employee Engagement</span><span>Organizational Development</span></div></div></li>
+      <li class="skill" data-c="3" tabindex="0"><span class="n">04</span><div><h3>Behavioral Science</h3><div class="tags"><span>Conflict Resolution &amp; Mediation</span><span>Psychological Safety</span><span>Interpersonal Assessment</span></div></div></li>
     </ul>
+    <p class="note reveal">Hover, tap or use ↑ ↓ to fly to a team in the network.</p>
   </div></div></section>
 
   <section id="education"><div class="wrap"><div class="col">
-    <p class="eyebrow reveal">04 — Education</p>
+    <p class="eyebrow reveal">05 — Education</p>
     <h2 class="reveal" style="margin-bottom:34px">Grounded in <em>psychology</em>.</h2>
     <div class="edu reveal"><div class="when">2022 — 2024</div><div><h3>M.S. in Psychology</h3><div class="org">Islamic Azad University</div></div></div>
     <div class="edu reveal"><div class="when">2018 — 2022</div><div><h3>B.S.</h3><div class="org">Ferdowsi University of Mashhad</div></div></div>
   </div></div></section>
 
   <section id="contact" class="contact"><div class="wrap"><div class="col">
-    <p class="eyebrow reveal">05 — Contact</p>
+    <p class="eyebrow reveal">06 — Contact</p>
     <h2 class="reveal">Let’s build a healthier, <em>higher-performing</em> workplace.</h2>
     <a class="mail reveal" href="mailto:kazemi.mahshid75@gmail.com">kazemi.mahshid75@gmail.com</a>
     <div class="btns reveal">
       <a class="btn" href="https://linkedin.com/in/mahshid-kazemi" target="_blank" rel="noopener">LinkedIn</a>
+      <button class="btn" id="copy" type="button">Copy email</button>
       <a class="btn" href="tel:+989151234618">+98 915 123 4618</a>
       <a class="btn p" href="Mahshid-Kazemi-CV.pdf" download>Download CV</a>
     </div>
   </div></div></section>
 </main>
-<footer>© Mahshid Kazemi</footer>
+<footer class="wrap"><span>© <span id="yr">2026</span> Mahshid Kazemi</span><span>Built with three.js · <a href="#hero">Back to top ↑</a></span></footer>
 
 <script>
 (() => {                                   // split the hero name into letters for the entrance animation
@@ -238,6 +278,20 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px
       } else if (c.nodeName !== 'BR') split(c);
     });
   })(h1);
+
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  const cp = document.getElementById('copy'), MAIL = 'kazemi.mahshid75@gmail.com';
+  const legacyCopy = () => {                  // fallback where the async clipboard API is blocked
+    const t = Object.assign(document.createElement('textarea'), { value: MAIL });
+    t.style.cssText = 'position:fixed;opacity:0'; document.body.append(t); t.select();
+    const ok = document.execCommand('copy'); t.remove(); return ok;
+  };
+  cp.addEventListener('click', async () => {
+    let ok = false;
+    try { await navigator.clipboard.writeText(MAIL); ok = true; } catch { ok = legacyCopy(); }
+    cp.textContent = ok ? 'Copied ✓' : MAIL;   // if both fail, show the address to copy by hand
+    setTimeout(() => cp.textContent = 'Copy email', 2200);
+  });
 
   // pointer (mouse or touch) pushes letters apart; springs pull them back together
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
@@ -267,6 +321,7 @@ footer { text-align: center; color: var(--muted); font-size: 13px; padding: 24px
       l.x += l.vx * dt; l.y += l.vy * dt; l.r += l.vr * dt;
       l.el.style.translate = `${l.x.toFixed(2)}px ${l.y.toFixed(2)}px`;
       l.el.style.rotate = `${l.r.toFixed(2)}deg`;
+      if (Math.abs(l.x) > 24) document.body.classList.add('played');   // hide the hint once discovered
       if (Math.abs(l.x) + Math.abs(l.y) + Math.abs(l.r) + Math.abs(l.vx) + Math.abs(l.vy) > .05) moving = true;
     });
     raf = P || moving ? requestAnimationFrame(tick) : 0;
@@ -432,9 +487,10 @@ const SEC = [
   { d: 33, az: 0,   el: .32, off: .22, lbl: 1, sp: 1 },    // hero: whole organisation
   { d: 23, az: 2.3, el: .12, off: -.27, lbl: 0, sp: 1.6, ctr: 1, dim: .85 },  // profile: the partner at the centre
   { d: 28, az: 3.7, el: .32, off: .27, lbl: 0, sp: 1.3, dim: .85 },  // experience
+  { d: 24, az: 4.5, el: .22, off: -.26, lbl: 0, sp: 1.2, dim: .85 }, // approach
   { d: 30, az: 0,   el: .2,  off: .22, lbl: 1, sp: 1, skills: 1 }, // skills: fly to each team
   { d: 24, az: 5.1, el: .15, off: .22, lbl: 0, sp: 1 },    // education
-  { d: 26, az: 6.9, el: .3,  off: 0,   lbl: 0, sp: 1.6, dim: .4 },  // contact
+  { d: 38, az: 6.9, el: .5,  off: 0,   lbl: 0, sp: 1.6, dim: .3 },  // contact
 ];
 const secs = [...document.querySelectorAll('main section')];
 const navA = [...document.querySelectorAll('nav ul a')];
@@ -446,6 +502,10 @@ rows.forEach(r => {
   r.addEventListener('pointerenter', on); r.addEventListener('focus', on); r.addEventListener('click', on);
   r.addEventListener('pointerleave', () => hover = -1); r.addEventListener('blur', () => hover = -1);
 });
+
+rows.forEach((r, i) => r.addEventListener('keydown', e => {
+  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); rows[(i + (e.key === 'ArrowDown' ? 1 : 3)) % 4].focus(); }
+}));
 
 const ptr = { x: 0, y: 0 };
 addEventListener('pointermove', e => { ptr.x = e.clientX / innerWidth - .5; ptr.y = e.clientY / innerHeight - .5; });
