@@ -12,4 +12,3 @@ Single-page portfolio built from `Mahshid-Kazemi-CV.pdf`. One file, no build ste
 - Layout is text on one side, network on the other (`off` in `SEC`); mobile dims the scene and adds a scrim.
 - Sections: hero, profile, experience, approach, skills, education, contact (order must match the `SEC` array in the script).
 - Scrolling: a small script snaps one section per wheel/swipe/key (700ms ease, then 300ms input lock: `LOCK`/`DUR`). Sections taller than the viewport scroll natively until their edge.
-- Open item: B.S. field of study is missing from the source resume.
