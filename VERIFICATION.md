@@ -1,4 +1,4 @@
-# Professional refinement verification — 14 October 2026
+# Portfolio verification — 14 October 2026 (visual corrections)
 
 ## Content and assets
 
@@ -6,7 +6,7 @@
 - Positioning: **HR Business Partner | Strategic People Operations**.
 - Exactly three featured case studies, in the requested order. Introductions contain 99, 91 and 94 words. Each separates the challenge, solution/capabilities, contribution and intended HR value.
 - Contributions follow the requester’s explicit clarification: HR domain expertise, needs discovery, requirements, PRDs, workflows, content and technical-team collaboration. No software-engineering role or measured project results are claimed.
-- Two dashboard previews use opaque redactions for internal names/identifiers and operational figures, including the performance comparison chart. Unredacted originals were not added to the repository. Public preview captions identify the redactions.
+- At the requester’s explicit direction, removed the dashboard masks and restored the original supplied PNGs byte-for-byte: onboarding 1391×799, performance 1435×756. Images are lossless, retain native aspect ratios, and link to full-resolution files. No artificial upscaling or generated image detail was added.
 - All three calendar screenshots are the original supplied PNGs, uncropped and unchanged. No AI-generated screenshots. The optional live calendar demo is not published; this avoids adding its external font dependency and keeps the main portfolio fully local.
 - The CV in latest main already matched the supplied resume. It was copied from the supplied asset and verified byte-for-byte, so Git correctly shows no PDF diff. SHA-256: `5a04da6ff7bbc06b537a09b1dd6e83c7ad050a8e34fe1fe4456a5b9f08085f2f`.
 
@@ -19,7 +19,7 @@ Chromium via Playwright against `python3 -m http.server 5173`:
 - Mobile menu expands/collapses and closes after section navigation. Links remain visible without JavaScript.
 - Native wheel scrolling responds to a small gesture without section snapping or input locks.
 - Keyboard skip link works. Focus indicators and native dialog focus containment are retained.
-- Reduced-motion mode disables the name reveal and does not request the network module or Three.js. The desktop network has no continuous render loop.
+- Restored the original organisation-network scene from commit `9026bf9`: original seeded cluster geometry, nodes, bridges, halos, rings, bloom, travelling pulses, pointer response, camera states and keyboard/hover skill focus. Added the projects camera state and ResizeObserver to accommodate the new case studies. Confirmed all five labels initialize, skill focus selects the correct cluster, and rendering produces no console errors. Mobile retains the original dimming. Reduced-motion mode skips the scene on load and stops rendering when enabled during the session; the simple name reveal remains independent.
 - Local fonts, local Three.js and supplied project PNGs load successfully.
 - The browser download returns the exact supplied PDF (SHA-256 checked). PDF text extraction succeeds.
 - Email, phone, WhatsApp, LinkedIn and GitHub URL targets match the request. This checks link wiring, not device app configuration, message delivery or ownership of external profiles. No messages were sent.
@@ -34,5 +34,9 @@ Reviewed [Ben Clarke’s leadership and culture portfolio](https://www.benclarke
 ## Human review
 
 - Confirm the Telegram username if a direct link is desired.
-- Review the redacted dashboard previews before approving publication; the PR remains unmerged pending approval.
+- The requester authorized merging and publication and explicitly requested the original unmasked screenshots. Their source resolution is the maximum detail available in the supplied files.
 - Native application launches require a device with the relevant phone/mail/messaging applications configured.
+
+## Typography refinement
+
+Kept the existing local Fraunces and Plus Jakarta Sans fonts. Increased body text to 16.5px, desktop navigation to 13px, experience bullets and case-study detail text to 15px, and mobile project introductions to 16px. Preserved generous line spacing, responsive heading sizes and focus states.
