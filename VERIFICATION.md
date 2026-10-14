@@ -40,3 +40,13 @@ Reviewed [Ben Clarke’s leadership and culture portfolio](https://www.benclarke
 ## Typography refinement
 
 Kept the existing local Fraunces and Plus Jakarta Sans fonts. Increased body text to 16.5px, desktop navigation to 13px, experience bullets and case-study detail text to 15px, and mobile project introductions to 16px. Preserved generous line spacing, responsive heading sizes and focus states.
+
+## Image palettes, frames and portrait
+
+- Inspected the requester’s reference portfolio (read-only). Its actual implementation preserves original screenshots and uses optional SVG color matrices; it does not reconstruct screenshots as HTML. Applied the same Original / Ocean / Amber presentation pattern here. No writes were made to the reference repository.
+- Original PNGs and full-size links remain unchanged. Color matrices preserve neutral UI pixels; two decorative layers cross-fade over 300ms. All three case studies and the lightbox share the selection, with guarded localStorage persistence. Original is the initial default. Palette layers are hidden from assistive technology.
+- Added subtle asymmetric navy frames with gold/orange borders, restrained hover elevation, and a short lightbox image reveal. Reduced-motion preferences disable these transitions.
+- Extracted the original portrait and its alpha mask from PDF image object 10 (1101×1117), without retouching or generating face details. Both the navbar name and hero name open a native, non-modal popover with a navy/gold/orange frame. Escape, outside click and an explicit close button dismiss it; name links open the image directly without JavaScript/popover support.
+- Chromium checks at 320, 375, 390, 430, 768, 1024, 1440 and 1920px passed: no overflow or console errors; portrait stays within the viewport; all five screenshot dialogs retain the selected palette and original-size destinations; selection persists on reload.
+- Actual rendered snapshots differ across the three palettes. Sampled opacity during the transition was 0.468482, confirming an intermediate cross-fade rather than an abrupt filter swap.
+- axe-core WCAG 2 A/AA and WCAG 2.1 AA scans report zero violations at 390px and 1440px. No-JavaScript image/portrait destinations remain available.

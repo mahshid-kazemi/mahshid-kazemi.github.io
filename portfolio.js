@@ -32,6 +32,7 @@ document.querySelectorAll(".preview").forEach((link) =>
     opener = link;
     image.src = link.href;
     image.alt = link.dataset.caption;
+    window.PortfolioMedia?.syncPreview();
     document.getElementById("full-image").href = link.href;
     document.getElementById("lightbox-caption").textContent =
       link.dataset.caption;
