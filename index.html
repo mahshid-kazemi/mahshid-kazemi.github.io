@@ -1,697 +1,843 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mahshid Kazemi — Strategic HR Partner</title>
-<meta name="description" content="Strategic HR professional and HR Business Partner with a Master’s in Psychology, supporting digital and product-driven teams.">
-<meta name="theme-color" content="#0a0d12">
-<meta property="og:title" content="Mahshid Kazemi — Strategic HR Partner">
-<meta property="og:description" content="HR Business Partner with a Master’s in Psychology, supporting digital and product-driven teams.">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0d12'/%3E%3Cpath d='M16 16 7 9M16 16l9-7M16 16v10' stroke='%23555' stroke-width='1'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23ff9d7a'/%3E%3Ccircle cx='7' cy='9' r='2.5' fill='%236ea8ff'/%3E%3Ccircle cx='25' cy='9' r='2.5' fill='%234fd1c5'/%3E%3Ccircle cx='16' cy='26' r='2.5' fill='%23f4c76a'/%3E%3C/svg%3E">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mahshid Kazemi","jobTitle":"HR Business Partner","description":"Strategic HR professional with a Master’s in Psychology.","sameAs":["https://linkedin.com/in/mahshid-kazemi"],"alumniOf":[{"@type":"CollegeOrUniversity","name":"Islamic Azad University"}]}</script>
-<noscript><style>.reveal{opacity:1;transform:none}#bg{display:none}</style></noscript>
-<link rel="stylesheet" href="fonts/fonts.css">
-<style>
-:root {
-  --bg: #0a0d12; --fg: #ebe7df; --muted: #8d93a1; --line: rgba(255,255,255,.13); --accent: #ff9d7a;
-  --serif: 'Fraunces', Georgia, serif; --sans: 'Plus Jakarta Sans', system-ui, sans-serif;
-}
-* { box-sizing: border-box; margin: 0; }
-html { scroll-behavior: smooth; color-scheme: dark; overscroll-behavior-y: none; }
-body { background: var(--bg); color: var(--fg); font: 400 16.5px/1.7 var(--sans); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; }
-#bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; opacity: 0; transition: opacity 2s ease; }
-body.ready #bg { opacity: 1; }
-a { color: inherit; text-decoration: none; }
-.wrap { width: min(1180px, 100% - 48px); margin-inline: auto; }
-em { font-style: italic; color: var(--accent); }
-
-/* hero name: rolling text. Each letter is a reel of repeated glyphs in a clipped cell; the reel scrolls whole
-   letter-heights with an expo-out ease (cycles and duration vary per letter), then settles on the real glyph. */
-h1 .ch { position: relative; display: inline-block; vertical-align: top; }
-h1 .ghost { display: block; visibility: hidden; }               /* sets the cell box so the landed word is exact */
-h1 .mask { position: absolute; inset: 0; overflow: hidden; }
-h1 .reel { display: block; will-change: transform; transition: transform var(--dur) cubic-bezier(.16, 1, .3, 1) var(--delay); }
-h1 .reel > span { display: block; height: calc(var(--lh) * 1em); }
-h1.go .reel { transform: translate3d(0, calc(var(--to) * var(--lh) * -1em), 0); }
-h1 .done .mask { overflow: visible; }                           /* unclip once landed (italic swashes, glow) */
-h1 .done .reel > span:not(:last-child) { visibility: hidden; }
-h1 em { animation: glow 4.5s ease-in-out 3.6s infinite; }
-@keyframes glow { 50% { text-shadow: 0 0 36px rgba(255,157,122,.5); } }
-@media (prefers-reduced-motion: reduce) {
-  h1 .reel { transition: none; transform: translate3d(0, calc(var(--to) * var(--lh) * -1em), 0); }
-  h1 em { animation: none; }
-}
-
-/* nav + progress */
-#bar { position: fixed; top: 0; left: 0; right: 0; height: 2px; background: var(--accent); transform-origin: 0 50%; transform: scaleX(0); z-index: 20; }
-nav { position: fixed; inset: 0 0 auto; z-index: 10; background: linear-gradient(#0a0d12ee, #0a0d1200); }
-nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 72px; }
-nav .brand { font: 380 21px var(--serif); letter-spacing: -.01em; }
-nav ul { display: flex; gap: 32px; list-style: none; padding: 0; font-size: 13.5px; letter-spacing: .04em; color: var(--muted); }
-nav ul a { transition: color .2s; padding: 6px 0; border-bottom: 1px solid transparent; }
-nav ul a:hover, nav ul a.on { color: var(--fg); }
-nav ul a.on { border-color: var(--accent); }
-.pill { font-size: 13.5px; padding: 9px 20px; border: 1px solid var(--line); border-radius: 999px; transition: background .2s, border-color .2s; }
-.pill:hover { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.3); }
-@media (max-width: 900px) { nav ul { display: none; } }
-
-/* sections */
-section { min-height: 100svh; display: flex; align-items: center; padding: 120px 0 80px; }
-.col { max-width: 560px; }
-.right .col { margin-left: auto; }
-.eyebrow { display: flex; align-items: center; gap: 14px; font-size: 12.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); margin-bottom: 26px; }
-.eyebrow::before { content: ''; width: 34px; height: 1px; background: var(--accent); }
-h1 { --lh: .95; font: 330 clamp(58px, 9.2vw, 128px)/var(--lh) var(--serif); letter-spacing: -.035em; }
-h2 { font: 340 clamp(34px, 4.4vw, 58px)/1.08 var(--serif); letter-spacing: -.025em; }
-h3 { font-size: 17px; font-weight: 600; line-height: 1.35; letter-spacing: -.005em; }
-p.lead { color: var(--muted); font-size: 18px; margin-top: 24px; max-width: 540px; }
-.btns { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 38px; }
-.btn { padding: 13px 26px; border-radius: 999px; font-size: 14.5px; font-weight: 500; border: 1px solid var(--line); transition: background .2s, transform .2s; }
-.btn:hover { background: rgba(255,255,255,.07); transform: translateY(-2px); }
-.btn.p { background: var(--fg); color: var(--bg); border-color: var(--fg); }
-.btn.p:hover { background: #fff; }
-
-.now { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--muted); max-width: 520px; }
-.now b { display: block; color: var(--fg); font-weight: 500; font-size: 14.5px; margin-top: 2px; }
-
-.stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 44px; border-top: 1px solid var(--line); }
-.stat { padding: 22px 18px 0 0; }
-.stat + .stat { padding-left: 18px; border-left: 1px solid var(--line); }
-.stat b { display: block; font: 330 56px/1 var(--serif); letter-spacing: -.03em; }
-.stat span { display: block; margin-top: 8px; font-size: 13px; line-height: 1.4; color: var(--muted); }
-
-.job { display: grid; grid-template-columns: 118px 1fr; gap: 20px; padding: 30px 0; border-top: 1px solid var(--line); }
-.job:last-child { border-bottom: 1px solid var(--line); }
-.when { font-size: 12.5px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); padding-top: 4px; }
-.org { color: var(--muted); font-size: 14.5px; margin: 3px 0 12px; }
-.job p { color: #c4c2bd; font-size: 15.5px; }
-.job ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
-.job li + li { margin-top: 5px; }
-@media (max-width: 600px) { .job { grid-template-columns: 1fr; gap: 6px; } }
-
-.skills { list-style: none; padding: 0; margin-top: 34px; }
-.skill { display: grid; grid-template-columns: 44px 1fr; padding: 20px 0 20px 16px; border-top: 1px solid var(--line); border-left: 2px solid transparent; opacity: .5; cursor: pointer; transition: opacity .35s, border-color .35s, background .35s; outline: none; }
-.skill:last-child { border-bottom: 1px solid var(--line); }
-.skill.on { opacity: 1; border-left-color: var(--c); background: linear-gradient(90deg, color-mix(in srgb, var(--c) 10%, transparent), transparent); }
-.skill .n { font: 400 18px var(--serif); font-style: italic; color: var(--c); padding-top: 2px; }
-.skill p { color: var(--muted); font-size: 14.5px; margin-top: 4px; }
-
-.edu { display: grid; grid-template-columns: 118px 1fr; gap: 20px; padding: 26px 0; border-top: 1px solid var(--line); }
-.edu:last-of-type { border-bottom: 1px solid var(--line); }
-.edu .org { margin: 3px 0 0; }
-
-.contact .col { max-width: 760px; margin-inline: auto; text-align: center; }
-.contact .eyebrow { justify-content: center; }
-.contact .eyebrow::before { display: none; }
-.mail { display: inline-block; margin-top: 36px; font: 340 clamp(24px, 3.8vw, 42px) var(--serif); letter-spacing: -.02em; border-bottom: 1px solid var(--accent); padding-bottom: 4px; transition: color .2s; word-break: break-all; }
-.mail:hover { color: var(--accent); }
-.contact .btns { justify-content: center; }
-
-/* details */
-.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
-.tags span { font-size: 12.5px; padding: 4px 11px; border-radius: 999px; border: 1px solid var(--line); color: #c9c6bf; background: rgba(255,255,255,.03); transition: border-color .35s; }
-.skill.on .tags span { border-color: color-mix(in srgb, var(--c) 50%, transparent); }
-.note { margin-top: 18px; font-size: 13px; color: var(--muted); }
-.hint { margin-top: 20px; font-size: 12.5px; letter-spacing: .04em; color: var(--muted); transition: opacity .8s; }
-.hint::before { content: '✦'; color: var(--accent); margin-right: 8px; }
-body.played .hint { opacity: 0; }
-#hero { position: relative; }
-.cue { position: absolute; bottom: 30px; left: max(24px, calc((100% - 1180px) / 2)); display: flex; align-items: center; gap: 14px; font-size: 11.5px; letter-spacing: .22em; text-transform: uppercase; color: var(--muted); }
-.cue::before { content: ''; width: 1px; height: 40px; background: linear-gradient(var(--accent), transparent); transform-origin: top; animation: drip 2.2s ease-in-out infinite; }
-@keyframes drip { 0% { transform: scaleY(0); } 50% { transform: scaleY(1); } 100% { transform: scaleY(1); opacity: 0; } }
-.pr { display: grid; grid-template-columns: 44px 1fr; padding: 22px 0; border-top: 1px solid var(--line); }
-.pr:last-of-type { border-bottom: 1px solid var(--line); }
-.pr .n { font: italic 400 20px var(--serif); color: var(--accent); }
-.pr p { color: var(--muted); font-size: 15px; margin-top: 4px; }
-button.btn { background: none; color: inherit; font-family: inherit; cursor: pointer; }
-footer a { border-bottom: 1px solid var(--line); transition: color .2s, border-color .2s; }
-footer a:hover { color: var(--fg); border-color: var(--accent); }
-@media (max-width: 800px) { .cue { display: none; } }
-
-/* floating 3D labels */
-.lbl { position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none; opacity: 0; will-change: transform, opacity; }
-.lbl span { display: block; transform: translate(-50%, -135%); white-space: nowrap; font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--fg); padding: 5px 11px; border-radius: 999px; background: rgba(10,13,18,.6); border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); backdrop-filter: blur(6px); }
-.lbl span::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--c); margin-right: 8px; vertical-align: 1px; }
-@media (max-width: 800px) { .lbl { display: none; } }
-
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s, transform .9s cubic-bezier(.2,.7,.2,1); }
-.reveal.in { opacity: 1; transform: none; }
-footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px; color: var(--muted); font-size: 13px; padding: 28px 0 40px; border-top: 1px solid var(--line); }
-@media (max-width: 800px) { section { padding: 100px 0 60px; } .now { grid-template-columns: 1fr; }
-  .col { background: rgba(10,13,18,.62); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); padding: 20px; margin-inline: -20px; border-radius: 18px; } }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
-</style>
-</head>
-<body>
-<canvas id="bg" aria-hidden="true"></canvas>
-<div id="bar"></div>
-<div id="labels" aria-hidden="true"></div>
-
-<nav><div class="wrap">
-  <a class="brand" href="#hero">Mahshid Kazemi</a>
-  <ul>
-    <li><a href="#profile">Profile</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#approach">Approach</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#education">Education</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <a class="pill" href="Mahshid-Kazemi-CV.pdf" download>Download CV</a>
-</div></nav>
-
-<main>
-  <section id="hero"><div class="wrap"><div class="col" style="max-width:720px">
-    <p class="eyebrow reveal">HR Business Partner · Psychology M.S.</p>
-    <h1><em>Mahshid</em><br>Kazemi</h1>
-    <p class="hint reveal">Hover or tap the name</p>
-    <p class="lead reveal">Practical people strategies for collaborative, effective and high-performing teams.</p>
-    <div class="btns reveal">
-      <a class="btn p" href="#contact">Get in touch</a>
-      <a class="btn" href="#experience">View experience</a>
-    </div>
-    <div class="now reveal">
-      <div>Currently<b>HRBP, Top Fast Technology</b></div>
-      <div>Previously<b>HR Generalist, Iran Hotel Online</b></div>
-    </div>
-  </div></div>
-    <a class="cue" href="#profile">Scroll</a>
-  </section>
-
-  <section id="profile" class="right"><div class="wrap"><div class="col">
-    <p class="eyebrow reveal">01 — Profile</p>
-    <h2 class="reveal">People strategy for <em>digital and product-driven</em> teams.</h2>
-    <p class="lead reveal">Strategic HR professional with a background in Psychology and hands-on experience in HR operations and business partnering across digital and product-driven environments. Experienced in talent management, employee engagement and supporting organizational growth through practical people strategies and cross-functional collaboration. Comfortable working in Agile environments and focused on supporting collaborative, effective and high-performing teams.</p>
-    <div class="stats reveal">
-      <div class="stat"><b data-count="4" data-suffix="+">0</b><span>years in HR</span></div>
-      <div class="stat"><b data-count="100" data-suffix="+">0</b><span>employees supported</span></div>
-      <div class="stat"><b data-count="3" data-suffix="">0</b><span>companies</span></div>
-    </div>
-  </div></div></section>
-
-  <section id="experience"><div class="wrap"><div class="col" style="max-width:640px">
-    <p class="eyebrow reveal">02 — Experience</p>
-    <h2 class="reveal" style="margin-bottom:34px">Scaling teams and <em>the way they work</em>.</h2>
-
-    <article class="job reveal">
-      <div class="when">2026 — Present</div>
-      <div>
-        <h3>HR Business Partner</h3>
-        <div class="org">Top Fast Technology</div>
-        <ul>
-          <li>Partnered with business leaders to align people strategy with organizational goals, driving workforce planning, performance and talent development across tech teams.</li>
-          <li>Led end-to-end employee lifecycle initiatives, including talent acquisition, onboarding, performance management, engagement and retention.</li>
-          <li>Used people analytics and employee insights to identify organizational challenges, improve employee experience and support data-driven workforce decisions.</li>
-        </ul>
-        <div class="tags"><span>HRBP</span><span>Workforce Planning</span><span>Employee Lifecycle</span><span>People Analytics</span></div>
-      </div>
-    </article>
-
-    <article class="job reveal">
-      <div class="when">2022 — 2026</div>
-      <div>
-        <h3>HR Generalist / Strategic HR Partner</h3>
-        <div class="org">Iran Hotel Online · Tourism &amp; E-commerce</div>
-        <p>Played a pivotal role in scaling the HR department and aligning people operations with the strategic business goals of a leading e-commerce and hospitality platform of 100+ employees.</p>
-        <ul>
-          <li>Managed end-to-end recruitment for technical, operational and cross-functional roles: candidate sourcing, HR screening interviews, behavioral and soft-skill assessments, interview coordination, onboarding and employment contracts.</li>
-          <li>Supported employee relations and conflict resolution, applying communication and behavioral assessment skills to keep the work environment collaborative and productive.</li>
-          <li>Improved onboarding and offboarding workflows through structured induction, improving onboarding consistency and new hire readiness.</li>
-          <li>Collaborated with managers on KPI-based performance reviews and contract renewal decisions, coordinating evaluations, feedback and performance documentation.</li>
-          <li>Used HR data and employee feedback insights to support retention and improve employee experience.</li>
-          <li>Designed and ran structured HR interviews and evaluation processes to improve candidate-job fit, team alignment and hiring quality.</li>
-        </ul>
-        <div class="tags"><span>Recruitment</span><span>Employee Relations</span><span>Onboarding &amp; Offboarding</span><span>Performance Reviews</span><span>100+ employees</span></div>
-      </div>
-    </article>
-
-    <article class="job reveal">
-      <div class="when">2025 — 2026</div>
-      <div>
-        <h3>HR Business Partner</h3>
-        <div class="org">Rohan Andisheh Sepidnam · Mobile game development</div>
-        <p>HRBP alongside product and technical teams in an Agile mobile game development environment, supporting recruitment, employee engagement, team collaboration and people processes across development and product functions.</p>
-        <ul>
-          <li>Managed recruitment for technical and cross-functional roles: candidate sourcing, HR screening interviews, behavioral and soft-skill assessments, interview coordination, onboarding and employment contracts.</li>
-          <li>Supported hiring and people operations for developers, designers, QA and other cross-functional team members.</li>
-          <li>Worked closely with product and technical leadership, team leads and management to improve team alignment, collaboration and communication within Agile teams.</li>
-          <li>Took part in Agile workflows and retrospectives to identify collaboration gaps, employee concerns and ways to improve team dynamics and work processes.</li>
-          <li>Assisted periodic performance review and retention processes by gathering performance feedback, team insights and KPI input from leadership.</li>
-        </ul>
-        <div class="tags"><span>HRBP</span><span>Tech Recruitment</span><span>Agile Teams</span><span>Retrospectives</span><span>Retention</span></div>
-      </div>
-    </article>
-  </div></div></section>
-
-  <section id="approach" class="right"><div class="wrap"><div class="col">
-    <p class="eyebrow reveal">03 — Approach</p>
-    <h2 class="reveal">People first, <em>data-informed</em> and Agile.</h2>
-    <div style="margin-top:34px">
-      <div class="pr reveal"><span class="n">i.</span><div><h3>Psychology-led</h3><p>A background in Psychology behind behavioral and soft-skill assessment, communication and conflict resolution.</p></div></div>
-      <div class="pr reveal"><span class="n">ii.</span><div><h3>Data-informed</h3><p>People analytics, HR data and employee feedback inform retention and workforce decisions.</p></div></div>
-      <div class="pr reveal"><span class="n">iii.</span><div><h3>Agile by default</h3><p>Working inside Agile product teams and their retrospectives, alongside product and technical leadership.</p></div></div>
-    </div>
-  </div></div></section>
-
-  <section id="skills"><div class="wrap"><div class="col" style="max-width:600px">
-    <p class="eyebrow reveal">04 — Core skills</p>
-    <h2 class="reveal">Four disciplines, <em>one network</em>.</h2>
-    <ul class="skills reveal">
-      <li class="skill" data-c="0" tabindex="0"><span class="n">01</span><div><h3>HR Strategy</h3><div class="tags"><span>HR Business Partnering</span><span>Workforce Planning</span><span>KPI-based Performance Management</span><span>People Analytics</span></div></div></li>
-      <li class="skill" data-c="1" tabindex="0"><span class="n">02</span><div><h3>Agile Management</h3><div class="tags"><span>Agile Product Teams</span><span>Retrospectives</span><span>Cross-functional Collaboration</span><span>Team Alignment</span></div></div></li>
-      <li class="skill" data-c="2" tabindex="0"><span class="n">03</span><div><h3>People &amp; Culture</h3><div class="tags"><span>Talent Acquisition</span><span>Onboarding &amp; Offboarding</span><span>Employee Engagement</span><span>Retention</span></div></div></li>
-      <li class="skill" data-c="3" tabindex="0"><span class="n">04</span><div><h3>Behavioral Science</h3><div class="tags"><span>Conflict Resolution</span><span>Employee Relations</span><span>Behavioral &amp; Soft-skill Assessment</span></div></div></li>
-    </ul>
-    <p class="note reveal">Hover, tap or use ↑ ↓ to fly to a team in the network.</p>
-  </div></div></section>
-
-  <section id="education"><div class="wrap"><div class="col">
-    <p class="eyebrow reveal">05 — Education</p>
-    <h2 class="reveal" style="margin-bottom:34px">Grounded in <em>psychology</em>.</h2>
-    <div class="edu reveal"><div class="when">2022 — 2024</div><div><h3>M.S. in Psychology</h3><div class="org">Islamic Azad University</div></div></div>
-  </div></div></section>
-
-  <section id="contact" class="contact"><div class="wrap"><div class="col">
-    <p class="eyebrow reveal">06 — Contact</p>
-    <h2 class="reveal">Let’s build collaborative, <em>high-performing</em> teams.</h2>
-    <a class="mail reveal" href="mailto:kazemi.mahshid75@gmail.com">kazemi.mahshid75@gmail.com</a>
-    <div class="btns reveal">
-      <a class="btn" href="https://linkedin.com/in/mahshid-kazemi" target="_blank" rel="noopener">LinkedIn</a>
-      <button class="btn" id="copy" type="button">Copy email</button>
-      <a class="btn" href="tel:+989151234618">+98 915 123 4618</a>
-      <a class="btn p" href="Mahshid-Kazemi-CV.pdf" download>Download CV</a>
-    </div>
-  </div></div></section>
-</main>
-<footer class="wrap"><span>© <span id="yr">2026</span> Mahshid Kazemi</span><span>Built with three.js · <a href="#hero">Back to top ↑</a></span></footer>
-
-<script>
-(() => {                                   // split the hero name into letters for the entrance animation
-  const h1 = document.querySelector('h1'); let i = 0;
-  const rnd = n => { const x = Math.sin(n * 127.1 + 7) * 43758.5453; return x - Math.floor(x); };   // deterministic per-letter variety
-  h1.setAttribute('aria-label', h1.textContent.replace('Mahshid', 'Mahshid '));  // <br> adds no space to textContent
-  (function split(n) {
-    [...n.childNodes].forEach(c => {
-      if (c.nodeType === 3) {
-        const f = document.createDocumentFragment();
-        [...c.textContent].forEach(ch => {
-          const s = document.createElement('span'), n = i++, cycles = 3 + Math.floor(rnd(n) * 3);
-          s.className = 'ch'; s.setAttribute('aria-hidden', 'true');
-          s.style.cssText = `--to:${cycles};--dur:${(2 + rnd(n + 50) * 1.1).toFixed(2)}s;--delay:${(.15 + n * .04).toFixed(2)}s`;
-          s.innerHTML = `<span class="ghost">${ch}</span><span class="mask"><span class="reel">${`<span>${ch}</span>`.repeat(cycles + 1)}</span></span>`;
-          f.append(s);
-        });
-        c.replaceWith(f);
-      } else if (c.nodeName !== 'BR') split(c);
-    });
-  })(h1);
-  h1.addEventListener('transitionend', e => e.target.closest?.('.ch')?.classList.add('done'));
-  (document.fonts?.ready ?? Promise.resolve()).then(() => requestAnimationFrame(() => requestAnimationFrame(() => h1.classList.add('go'))));
-
-  document.getElementById('yr').textContent = new Date().getFullYear();
-  const cp = document.getElementById('copy'), MAIL = 'kazemi.mahshid75@gmail.com';
-  const legacyCopy = () => {                  // fallback where the async clipboard API is blocked
-    const t = Object.assign(document.createElement('textarea'), { value: MAIL });
-    t.style.cssText = 'position:fixed;opacity:0'; document.body.append(t); t.select();
-    const ok = document.execCommand('copy'); t.remove(); return ok;
-  };
-  cp.addEventListener('click', async () => {
-    let ok = false;
-    try { await navigator.clipboard.writeText(MAIL); ok = true; } catch { ok = legacyCopy(); }
-    cp.textContent = ok ? 'Copied ✓' : MAIL;   // if both fail, show the address to copy by hand
-    setTimeout(() => cp.textContent = 'Copy email', 2200);
-  });
-
-  // pointer (mouse or touch) pushes letters apart; springs pull them back together
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const L = [...h1.querySelectorAll('.ch')].map(el => ({ el, x: 0, y: 0, r: 0, vx: 0, vy: 0, vr: 0 }));
-  let P = null, raf = 0, last = 0, hold = 0;
-  const R = () => Math.max(100, Math.min(190, innerWidth * .15));
-  const near = (x, y) => {                    // only react near the name, so the page stays quiet elsewhere
-    const b = h1.getBoundingClientRect(), m = R();
-    return x > b.left - m && x < b.right + m && y > b.top - m && y < b.bottom + m;
-  };
-  function tick(t) {
-    const dt = Math.min((t - last) / 16.7 || 1, 3), r = R(); last = t;
-    let moving = false;
-    L.forEach(l => {
-      const b = l.el.getBoundingClientRect(), cx = b.left + b.width / 2 - l.x, cy = b.top + b.height / 2 - l.y;
-      let tx = 0, ty = 0, tr = 0;
-      if (P) {
-        const dx = cx - P.x, dy = cy - P.y, d = Math.hypot(dx, dy) || 1, reach = r * (P.down ? 1.8 : 1);
-        if (d < reach) {
-          const k = (reach - d) * .95;
-          tx = dx / d * k; ty = dy / d * k; tr = dx / reach * 40;
-        }
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      Mahshid Kazemi — HR Business Partner | Strategic People Operations
+    </title>
+    <meta
+      name="description"
+      content="HR Business Partner combining strategic people operations, employee lifecycle management, people analytics and HR digital transformation for technology teams."
+    />
+    <link rel="canonical" href="https://mahshid-kazemi.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mahshid-kazemi.github.io/" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="theme-color" content="#0a0d12" />
+    <meta
+      property="og:title"
+      content="Mahshid Kazemi — HR Business Partner | Strategic People Operations"
+    />
+    <meta
+      property="og:description"
+      content="Strategic people operations, employee experience and HR digital transformation for technology teams."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230a0d12'/%3E%3Cpath d='M16 16 7 9M16 16l9-7M16 16v10' stroke='%23555' stroke-width='1'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23ff9d7a'/%3E%3Ccircle cx='7' cy='9' r='2.5' fill='%236ea8ff'/%3E%3Ccircle cx='25' cy='9' r='2.5' fill='%234fd1c5'/%3E%3Ccircle cx='16' cy='26' r='2.5' fill='%23f4c76a'/%3E%3C/svg%3E"
+    />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mahshid Kazemi",
+        "url": "https://mahshid-kazemi.github.io/",
+        "jobTitle": "HR Business Partner",
+        "description": "HR Business Partner | Strategic People Operations. HR domain expertise, people analytics and HR product requirements.",
+        "email": "kazemi.mahshid75@gmail.com",
+        "telephone": "+989151234618",
+        "sameAs": [
+          "https://www.linkedin.com/in/mahshid-kazemi-317737353",
+          "https://github.com/mahshid-kazemi"
+        ]
       }
-      l.vx += (tx - l.x) * .11 * dt; l.vy += (ty - l.y) * .11 * dt; l.vr += (tr - l.r) * .11 * dt;
-      const damp = Math.pow(.8, dt);          // under-damped: letters overshoot a little as they rejoin
-      l.vx *= damp; l.vy *= damp; l.vr *= damp;
-      l.x += l.vx * dt; l.y += l.vy * dt; l.r += l.vr * dt;
-      l.el.style.translate = `${l.x.toFixed(2)}px ${l.y.toFixed(2)}px`;
-      l.el.style.rotate = `${l.r.toFixed(2)}deg`;
-      if (Math.abs(l.x) > 24) document.body.classList.add('played');   // hide the hint once discovered
-      if (Math.abs(l.x) + Math.abs(l.y) + Math.abs(l.r) + Math.abs(l.vx) + Math.abs(l.vy) > .05) moving = true;
-    });
-    raf = P || moving ? requestAnimationFrame(tick) : 0;
-  }
-  const aim = (e, down) => {
-    clearTimeout(hold);
-    P = near(e.clientX, e.clientY) ? { x: e.clientX, y: e.clientY, down } : null;
-    if (P && !raf) { last = performance.now(); raf = requestAnimationFrame(tick); }
-  };
-  const release = e => {                      // touch: keep the burst briefly so a tap is visible
-    clearTimeout(hold);
-    hold = setTimeout(() => P = null, e.pointerType === 'mouse' ? 0 : 350);
-  };
-  let down = false;
-  addEventListener('pointermove', e => { if (e.pointerType === 'mouse' || down) aim(e, down); });
-  addEventListener('pointerdown', e => { down = true; aim(e, true); });
-  addEventListener('pointerup', e => { down = false; e.pointerType === 'mouse' ? aim(e, false) : release(e); });
-  addEventListener('pointercancel', e => { down = false; release(e); });   // finger started scrolling: let go
-  document.addEventListener('mouseout', e => { if (!e.relatedTarget) P = null; });   // mouse left the window
-})();
-</script>
-<script>
-/* Section snapping: one scroll gesture = one section. Eased jump, then input is locked for LOCK ms.
-   Sections taller than the viewport still scroll natively until their edge is reached. */
-(() => {
-  const secs = [...document.querySelectorAll('main section')];
-  const LOCK = 300, DUR = 700, reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let locked = false, lastWheel = 0, lastAbs = 0;
-  const top = i => secs[i].offsetTop;
-  const max = () => Math.max(0, document.documentElement.scrollHeight - innerHeight);
-  const cur = () => { const m = scrollY + innerHeight / 2; let k = 0; secs.forEach((_, i) => { if (top(i) <= m) k = i; }); return k; };
-  const tall = i => secs[i].offsetHeight > innerHeight + 40;   // taller than the screen: scroll natively through it
+    </script>
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="refinements.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <canvas id="bg" aria-hidden="true"></canvas>
+    <div id="bar"></div>
 
-  // where should a step in direction dir go?  number = target, null = let the browser scroll, undefined = nowhere to go
-  function step(dir) {
-    const i = cur(), y = scrollY, t0 = top(i);
-    if (dir > 0) {
-      if (tall(i) && t0 + secs[i].offsetHeight - innerHeight - y > 4) return null;
-      const t = i < secs.length - 1 ? top(i + 1) : max();
-      return t - y > 4 ? t : undefined;
-    }
-    if (y - t0 > 4) return tall(i) ? null : t0;
-    return i ? (tall(i - 1) ? Math.max(top(i - 1), t0 - innerHeight) : top(i - 1)) : undefined;
-  }
+    <nav aria-label="Main navigation">
+      <div class="wrap">
+        <a class="brand" href="#hero">Mahshid Kazemi</a>
+        <button
+          class="menu-toggle pill"
+          type="button"
+          aria-expanded="false"
+          aria-controls="nav-links"
+          hidden
+        >
+          Menu
+        </button>
+        <ul id="nav-links">
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a class="pill" href="Mahshid-Kazemi-CV.pdf" download>Download CV</a>
+      </div>
+    </nav>
 
-  function go(to) {
-    locked = true;
-    const from = scrollY, t0 = performance.now(), dur = reduce ? 0 : DUR;
-    const ease = k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;   // easeInOutCubic
-    (function frame(t) {
-      const k = dur ? Math.min((t - t0) / dur, 1) : 1;
-      scrollTo({ top: from + (to - from) * ease(k), behavior: 'instant' });
-      if (k < 1) requestAnimationFrame(frame); else setTimeout(() => locked = false, LOCK);
-    })(t0);
-  }
+    <main id="main">
+      <section id="hero">
+        <div class="wrap">
+          <div class="col" style="max-width: 720px">
+            <p class="eyebrow">
+              HR Business Partner | Strategic People Operations
+            </p>
+            <h1><em>Mahshid</em><br />Kazemi</h1>
+            <p class="lead">
+              Connecting people strategy, employee experience and practical HR
+              digital transformation.
+            </p>
+            <div class="btns">
+              <a class="btn p" href="#contact">Get in touch</a>
+              <a class="btn" href="#projects">Explore HR projects</a>
+            </div>
+            <div class="now">
+              <div>Currently<b>HRBP, Top Fast Technology</b></div>
+              <div>Previously<b>HR Generalist, Iran Hotel Online</b></div>
+            </div>
+          </div>
+        </div>
+        <a class="cue" href="#profile">Scroll</a>
+      </section>
 
-  addEventListener('wheel', e => {
-    if (e.ctrlKey || Math.abs(e.deltaY) < 4) return;            // pinch-zoom / sideways scroll
-    const now = performance.now(), a = Math.abs(e.deltaY);
-    const fresh = now - lastWheel > 120 || a > lastAbs * 1.3;   // a new gesture, not a trackpad's inertia tail
-    lastWheel = now; lastAbs = a;
-    if (locked) return e.preventDefault();
-    const t = step(Math.sign(e.deltaY));
-    if (t === null) return;
-    e.preventDefault();
-    if (t !== undefined && fresh) go(t);
-  }, { passive: false });
+      <section id="profile" class="right">
+        <div class="wrap">
+          <div class="col">
+            <p class="eyebrow">01 — Profile</p>
+            <h2>
+              People strategy for <em>digital and product-driven</em> teams.
+            </h2>
+            <p class="lead">
+              Strategic HR professional with a background in Psychology and
+              hands-on experience in HR operations and business partnering
+              across digital and product-driven environments. Experienced in
+              talent management, employee engagement and supporting
+              organizational growth through practical people strategies and
+              cross-functional collaboration. Comfortable working in Agile
+              environments and focused on supporting collaborative, effective
+              and high-performing teams.
+            </p>
+            <p class="note">
+              HR business partnering · Employee lifecycle · People analytics ·
+              HR product requirements
+            </p>
+          </div>
+        </div>
+      </section>
 
-  let y0 = 0;
-  addEventListener('touchstart', e => { y0 = e.touches[0].clientY; }, { passive: true });
-  addEventListener('touchmove', e => {                          // stop the native scroll only where we will snap
-    const dir = Math.sign(y0 - e.touches[0].clientY);
-    if (e.cancelable && dir && (locked || step(dir) !== null)) e.preventDefault();
-  }, { passive: false });
-  addEventListener('touchend', e => {
-    const dy = y0 - e.changedTouches[0].clientY;
-    if (Math.abs(dy) < 50 || locked) return;
-    const t = step(Math.sign(dy));
-    if (t != null) go(t);
-  }, { passive: true });
+      <section id="experience">
+        <div class="wrap">
+          <div class="col" style="max-width: 640px">
+            <p class="eyebrow">02 — Experience</p>
+            <h2 style="margin-bottom: 34px">
+              Scaling teams and <em>the way they work</em>.
+            </h2>
 
-  addEventListener('keydown', e => {
-    if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
-    if (e.key === ' ' && e.target !== document.body) return;    // let focused buttons/links keep Space
-    const dir = { ArrowDown: 1, PageDown: 1, ' ': e.shiftKey ? -1 : 1, ArrowUp: -1, PageUp: -1 }[e.key];
-    if (e.key === 'Home' || e.key === 'End') { e.preventDefault(); if (!locked) go(e.key === 'Home' ? 0 : max()); return; }
-    if (!dir) return;
-    const t = locked ? undefined : step(dir);
-    if (t === null) return;
-    e.preventDefault();
-    if (t !== undefined) go(t);
-  });
+            <article class="job">
+              <div class="when">2026 — Present</div>
+              <div>
+                <h3>HR Business Partner</h3>
+                <div class="org">Top Fast Technology</div>
+                <ul>
+                  <li>
+                    Partnered with business leaders to align people strategy
+                    with organizational goals, driving workforce planning,
+                    performance and talent development across tech teams.
+                  </li>
+                  <li>
+                    Led end-to-end employee lifecycle initiatives, including
+                    talent acquisition, onboarding, performance management,
+                    engagement and retention.
+                  </li>
+                  <li>
+                    Used people analytics and employee insights to identify
+                    organizational challenges, improve employee experience and
+                    support data-driven workforce decisions.
+                  </li>
+                </ul>
+                <div class="tags">
+                  <span>HRBP</span><span>Workforce Planning</span
+                  ><span>Employee Lifecycle</span><span>People Analytics</span>
+                </div>
+              </div>
+            </article>
 
-  document.addEventListener('click', e => {                     // nav links use the same eased jump
-    const a = e.target.closest('a[href^="#"]');
-    const i = a ? secs.findIndex(s => '#' + s.id === a.getAttribute('href')) : -1;
-    if (i < 0) return;
-    e.preventDefault();
-    if (!locked) go(top(i));
-  });
-})();
-</script>
-<script type="importmap">{"imports":{
-  "three":"./vendor/three/build/three.module.js",
-  "three/addons/":"./vendor/three/examples/jsm/"}}</script>
-<script type="module">
-import * as THREE from 'three';
-import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
-import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
-import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+            <article class="job">
+              <div class="when">2022 — 2026</div>
+              <div>
+                <h3>HR Generalist / Strategic HR Partner</h3>
+                <div class="org">
+                  Iran Hotel Online · Tourism &amp; E-commerce
+                </div>
+                <p>
+                  Played a pivotal role in scaling the HR department and
+                  aligning people operations with the strategic business goals
+                  of a leading e-commerce and hospitality platform of 100+
+                  employees.
+                </p>
+                <ul>
+                  <li>
+                    Managed end-to-end recruitment for technical, operational
+                    and cross-functional roles: candidate sourcing, HR screening
+                    interviews, behavioral and soft-skill assessments, interview
+                    coordination, onboarding and employment contracts.
+                  </li>
+                  <li>
+                    Supported employee relations and conflict resolution,
+                    applying communication and behavioral assessment skills to
+                    keep the work environment collaborative and productive.
+                  </li>
+                  <li>
+                    Improved onboarding and offboarding workflows through
+                    structured induction, improving onboarding consistency and
+                    new hire readiness.
+                  </li>
+                  <li>
+                    Collaborated with managers on KPI-based performance reviews
+                    and contract renewal decisions, coordinating evaluations,
+                    feedback and performance documentation.
+                  </li>
+                  <li>
+                    Used HR data and employee feedback insights to support
+                    retention and improve employee experience.
+                  </li>
+                  <li>
+                    Designed and ran structured HR interviews and evaluation
+                    processes to improve candidate-job fit, team alignment and
+                    hiring quality.
+                  </li>
+                </ul>
+                <div class="tags">
+                  <span>Recruitment</span><span>Employee Relations</span
+                  ><span>Onboarding &amp; Offboarding</span
+                  ><span>Performance Reviews</span><span>100+ employees</span>
+                </div>
+              </div>
+            </article>
 
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-const mobile = () => innerWidth < 800;
+            <article class="job">
+              <div class="when">2025 — 2026</div>
+              <div>
+                <h3>HR Business Partner</h3>
+                <div class="org">
+                  Rohan Andisheh Sepidnam · Mobile game development
+                </div>
+                <p>
+                  HRBP alongside product and technical teams in an Agile mobile
+                  game development environment, supporting recruitment, employee
+                  engagement, team collaboration and people processes across
+                  development and product functions.
+                </p>
+                <ul>
+                  <li>
+                    Managed recruitment for technical and cross-functional
+                    roles: candidate sourcing, HR screening interviews,
+                    behavioral and soft-skill assessments, interview
+                    coordination, onboarding and employment contracts.
+                  </li>
+                  <li>
+                    Supported hiring and people operations for developers,
+                    designers, QA and other cross-functional team members.
+                  </li>
+                  <li>
+                    Worked closely with product and technical leadership, team
+                    leads and management to improve team alignment,
+                    collaboration and communication within Agile teams.
+                  </li>
+                  <li>
+                    Took part in Agile workflows and retrospectives to identify
+                    collaboration gaps, employee concerns and ways to improve
+                    team dynamics and work processes.
+                  </li>
+                  <li>
+                    Assisted periodic performance review and retention processes
+                    by gathering performance feedback, team insights and KPI
+                    input from leadership.
+                  </li>
+                </ul>
+                <div class="tags">
+                  <span>HRBP</span><span>Tech Recruitment</span
+                  ><span>Agile Teams</span><span>Retrospectives</span
+                  ><span>Retention</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-/* ---------- reveal + counters ---------- */
-const io = new IntersectionObserver(es => es.forEach(e => {
-  if (!e.isIntersecting) return;
-  e.target.classList.add('in'); io.unobserve(e.target);
-  e.target.querySelectorAll('[data-count]').forEach(count);
-}), { threshold: .2 });
-document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-function count(el) {
-  const to = +el.dataset.count, sfx = el.dataset.suffix || '', t0 = performance.now();
-  (function step(t) {
-    const k = reduce ? 1 : Math.min((t - t0) / 1400, 1);
-    el.textContent = Math.round(to * (1 - (1 - k) ** 3)) + sfx;
-    if (k < 1) requestAnimationFrame(step);
-  })(t0);
-}
+      <section id="approach" class="right">
+        <div class="wrap">
+          <div class="col">
+            <p class="eyebrow">03 — Approach</p>
+            <h2>People first, <em>data-informed</em> and Agile.</h2>
+            <div style="margin-top: 34px">
+              <div class="pr">
+                <span class="n">i.</span>
+                <div>
+                  <h3>Psychology-led</h3>
+                  <p>
+                    A background in Psychology behind behavioral and soft-skill
+                    assessment, communication and conflict resolution.
+                  </p>
+                </div>
+              </div>
+              <div class="pr">
+                <span class="n">ii.</span>
+                <div>
+                  <h3>Data-informed</h3>
+                  <p>
+                    People analytics, HR data and employee feedback inform
+                    retention and workforce decisions.
+                  </p>
+                </div>
+              </div>
+              <div class="pr">
+                <span class="n">iii.</span>
+                <div>
+                  <h3>Agile by default</h3>
+                  <p>
+                    Working inside Agile product teams and their retrospectives,
+                    alongside product and technical leadership.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-/* ---------- the organisation as a network ---------- */
-try {
-const V = THREE.Vector3, BG = 0x0a0d12;
-const canvas = document.getElementById('bg');
-const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
-renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
-const scene = new THREE.Scene();
-scene.background = new THREE.Color(BG);
-scene.fog = new THREE.Fog(BG, 26, 62);
-const camera = new THREE.PerspectiveCamera(45, 1, .1, 120);
+      <section id="skills">
+        <div class="wrap">
+          <div class="col" style="max-width: 600px">
+            <p class="eyebrow">04 — Core skills</p>
+            <h2>People expertise, <em>put into practice</em>.</h2>
+            <ul class="skills">
+              <li class="skill">
+                <span class="n">01</span>
+                <div>
+                  <h3>Strategic HR &amp; Business Partnering</h3>
+                  <div class="tags">
+                    <span>People strategy</span
+                    ><span>Workforce planning support</span
+                    ><span>Stakeholder collaboration</span
+                    ><span>HR process improvement</span>
+                  </div>
+                </div>
+              </li>
+              <li class="skill">
+                <span class="n">02</span>
+                <div>
+                  <h3>Talent &amp; Employee Lifecycle</h3>
+                  <div class="tags">
+                    <span>Talent acquisition</span
+                    ><span>Behavioral interviews</span
+                    ><span>Onboarding and offboarding</span
+                    ><span>Employee engagement</span
+                    ><span>Talent retention</span
+                    ><span>Employee relations</span>
+                  </div>
+                </div>
+              </li>
+              <li class="skill">
+                <span class="n">03</span>
+                <div>
+                  <h3>Performance &amp; People Analytics</h3>
+                  <div class="tags">
+                    <span>Performance evaluation</span
+                    ><span>KPI-based reviews</span><span>Employee feedback</span
+                    ><span>HR data interpretation</span
+                    ><span>Performance documentation</span>
+                  </div>
+                </div>
+              </li>
+              <li class="skill">
+                <span class="n">04</span>
+                <div>
+                  <h3>HR Digital Transformation &amp; Collaboration</h3>
+                  <div class="tags">
+                    <span>HR requirements analysis</span
+                    ><span>Business requirements documentation</span
+                    ><span>HR process design</span
+                    ><span>PRD and functional documentation</span
+                    ><span>Cross-functional collaboration</span
+                    ><span>Agile team environments</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-const composer = new EffectComposer(renderer);
-composer.addPass(new RenderPass(scene, camera));
-const bloom = new UnrealBloomPass(new THREE.Vector2(1, 1), .55, .7, .2);
-composer.addPass(bloom);
-composer.addPass(new OutputPass());
+      <section id="projects">
+        <div class="wrap">
+          <header class="projects-heading">
+            <p class="eyebrow">05 — Selected HR Projects</p>
+            <h2>From HR insight to <em>useful digital experiences</em>.</h2>
+            <p class="lead">
+              Three case studies in translating people needs into structured
+              processes, product requirements and employee experiences.
+            </p>
+            <p class="note">
+              HR Domain Expert &amp; Product Requirements Owner — contribution
+              across HR discovery, business analysis, documentation and
+              technical-team handoff.
+            </p>
+          </header>
+          <article class="case-study" aria-labelledby="project-1">
+            <header>
+              <p class="eyebrow">Case study 01</p>
+              <h3 id="project-1">
+                Employee Onboarding &amp; Internal HR Portal
+              </h3>
+              <p class="project-intro">
+                The Employee Onboarding &amp; Internal HR Portal is a digital
+                workplace initiative designed to improve the employee experience
+                by centralizing essential organizational information, onboarding
+                resources, internal communications, and HR-related services. The
+                project responds to challenges such as fragmented onboarding
+                instructions, inconsistent employee communication, and limited
+                access to relevant internal resources. Drawing on her experience
+                across employee lifecycle management and HR operations, Mahshid
+                identified key HR needs, structured business requirements,
+                defined workflows, contributed to product documentation, and
+                prepared content and specifications for technical
+                implementation. The solution illustrates how practical HR
+                knowledge can be translated into a structured digital employee
+                experience.
+              </p>
+            </header>
+            <div class="gallery">
+              <figure>
+                <a
+                  class="preview"
+                  href="assets/projects/onboarding-dashboard.png"
+                  data-caption="Employee portal: onboarding resources, internal communications and HR services. Internal identifiers and operational figures are redacted."
+                  aria-label="Expand screenshot: Employee portal: onboarding resources, internal communications and HR services. Internal identifiers and operational figures are redacted."
+                  ><img
+                    src="assets/projects/onboarding-dashboard.png"
+                    width="1391"
+                    height="799"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Employee portal: onboarding resources, internal communications and HR services. Internal identifiers and operational figures are redacted."
+                /></a>
+                <figcaption>
+                  Employee portal: onboarding resources, internal communications
+                  and HR services. Internal identifiers and operational figures
+                  are redacted. <span>Open full-size</span>
+                </figcaption>
+              </figure>
+            </div>
+            <dl class="case-details">
+              <div>
+                <dt>Organizational challenge</dt>
+                <dd>
+                  Fragmented onboarding guidance and internal information can
+                  make it difficult for employees to find the support they need.
+                </dd>
+              </div>
+              <div>
+                <dt>HR solution & capabilities</dt>
+                <dd>
+                  A central employee portal with structured onboarding journeys,
+                  role-based resources, internal communications and employee
+                  self-service concepts.
+                </dd>
+              </div>
+              <div>
+                <dt>Mahshid’s contribution</dt>
+                <dd>
+                  HR needs analysis, stakeholder interviews and requirements
+                  discovery, business planning, PRD preparation, workflow
+                  definition, functional and technical handoff specifications,
+                  and HR content preparation.
+                </dd>
+              </div>
+              <div>
+                <dt>Intended HR value</dt>
+                <dd>
+                  Intended to make onboarding more consistent, information
+                  easier to find and employee communication clearer.
+                </dd>
+              </div>
+            </dl>
+            <div class="tags">
+              <span>Employee lifecycle</span><span>Onboarding</span
+              ><span>Requirements discovery</span><span>HR process design</span>
+            </div>
+            <p class="note">
+              Public preview with internal identifiers and operational data
+              redacted.
+            </p>
+          </article>
+          <article class="case-study" aria-labelledby="project-2">
+            <header>
+              <p class="eyebrow">Case study 02</p>
+              <h3 id="project-2">Employee Performance Evaluation Platform</h3>
+              <p class="project-intro">
+                The Employee Performance Evaluation Platform is an HR-focused
+                digital solution designed to support a consistent and
+                transparent performance-management process. It brings together
+                structured evaluation workflows, KPI-based assessments, manager
+                and employee feedback, performance documentation, and
+                information useful for people-management decisions. Based on her
+                practical involvement in employee evaluation, performance
+                reviews, and HR business partnering, Mahshid helped identify
+                organizational needs, translate HR processes into product
+                requirements, prepare business and functional documentation, and
+                define the expected evaluation workflows. The project highlights
+                the intersection of HR strategy, employee development,
+                performance management, and digital process improvement.
+              </p>
+            </header>
+            <div class="gallery">
+              <figure>
+                <a
+                  class="preview"
+                  href="assets/projects/performance-evaluation-dashboard.png"
+                  data-caption="Performance evaluation dashboard with assessment and reporting areas. Internal names, scores, counts and team comparisons are redacted."
+                  aria-label="Expand screenshot: Performance evaluation dashboard with assessment and reporting areas. Internal names, scores, counts and team comparisons are redacted."
+                  ><img
+                    src="assets/projects/performance-evaluation-dashboard.png"
+                    width="1435"
+                    height="756"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Performance evaluation dashboard with assessment and reporting areas. Internal names, scores, counts and team comparisons are redacted."
+                /></a>
+                <figcaption>
+                  Performance evaluation dashboard with assessment and reporting
+                  areas. Internal names, scores, counts and team comparisons are
+                  redacted. <span>Open full-size</span>
+                </figcaption>
+              </figure>
+            </div>
+            <dl class="case-details">
+              <div>
+                <dt>Organizational challenge</dt>
+                <dd>
+                  Inconsistent evaluation criteria, scattered feedback and
+                  fragmented documentation can make performance discussions
+                  harder to coordinate.
+                </dd>
+              </div>
+              <div>
+                <dt>HR solution & capabilities</dt>
+                <dd>
+                  Structured manager and employee review workflows, KPI-based
+                  criteria, feedback documentation and HR reporting concepts.
+                </dd>
+              </div>
+              <div>
+                <dt>Mahshid’s contribution</dt>
+                <dd>
+                  HR process analysis, stakeholder requirements, evaluation
+                  workflow definition, business planning, PRD and functional
+                  specifications, content preparation, and collaboration with
+                  product and technical teams.
+                </dd>
+              </div>
+              <div>
+                <dt>Intended HR value</dt>
+                <dd>
+                  Intended to support consistent evaluations, clearer feedback
+                  and data-informed performance discussions.
+                </dd>
+              </div>
+            </dl>
+            <div class="tags">
+              <span>Performance management</span><span>People analytics</span
+              ><span>Business analysis</span
+              ><span>Functional requirements</span>
+            </div>
+            <p class="note">
+              Public preview with internal identifiers and operational data
+              redacted.
+            </p>
+          </article>
+          <article class="case-study" aria-labelledby="project-3">
+            <header>
+              <p class="eyebrow">Case study 03</p>
+              <h3 id="project-3">HR Engagement &amp; Events Calendar 1405</h3>
+              <p class="project-intro">
+                The HR Engagement &amp; Events Calendar is an interactive
+                planning resource designed to help People &amp; Culture teams
+                turn important cultural, national, and international occasions
+                into meaningful employee-engagement opportunities. Instead of
+                functioning as a conventional date calendar, it connects
+                relevant occasions with ideas for internal communications,
+                employee recognition, team activities, and organizational
+                culture initiatives. The tool presents a full-year visual
+                overview, detailed monthly listings, occasion categories, and
+                activity suggestions, helping HR teams coordinate engagement
+                efforts throughout the year. This project reflects Mahshid’s
+                approach to combining people-focused planning, structured HR
+                content, and accessible digital tools.
+              </p>
+            </header>
+            <div class="gallery">
+              <figure>
+                <a
+                  class="preview"
+                  href="assets/projects/calendar-screenshot-1.png"
+                  data-caption="Annual calendar map with color-coded occasion categories."
+                  aria-label="Expand screenshot: Annual calendar map with color-coded occasion categories."
+                  ><img
+                    src="assets/projects/calendar-screenshot-1.png"
+                    width="971"
+                    height="865"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Annual calendar map with color-coded occasion categories."
+                /></a>
+                <figcaption>
+                  Annual calendar map with color-coded occasion categories.
+                  <span>Open full-size</span>
+                </figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="preview"
+                  href="assets/projects/calendar-screenshot-2.png"
+                  data-caption="Monthly occasion details with employee-engagement and activity suggestions."
+                  aria-label="Expand screenshot: Monthly occasion details with employee-engagement and activity suggestions."
+                  ><img
+                    src="assets/projects/calendar-screenshot-2.png"
+                    width="972"
+                    height="732"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Monthly occasion details with employee-engagement and activity suggestions."
+                /></a>
+                <figcaption>
+                  Monthly occasion details with employee-engagement and activity
+                  suggestions. <span>Open full-size</span>
+                </figcaption>
+              </figure>
+              <figure>
+                <a
+                  class="preview"
+                  href="assets/projects/calendar-screenshot-3.png"
+                  data-caption="Interactive occasion tooltip and category filtering on the annual map."
+                  aria-label="Expand screenshot: Interactive occasion tooltip and category filtering on the annual map."
+                  ><img
+                    src="assets/projects/calendar-screenshot-3.png"
+                    width="972"
+                    height="860"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Interactive occasion tooltip and category filtering on the annual map."
+                /></a>
+                <figcaption>
+                  Interactive occasion tooltip and category filtering on the
+                  annual map. <span>Open full-size</span>
+                </figcaption>
+              </figure>
+            </div>
+            <dl class="case-details">
+              <div>
+                <dt>Organizational challenge</dt>
+                <dd>
+                  Relevant occasions and engagement ideas are often spread
+                  across separate calendars and planning documents.
+                </dd>
+              </div>
+              <div>
+                <dt>HR solution & capabilities</dt>
+                <dd>
+                  A Persian RTL calendar for 1405 with an annual map,
+                  color-coded national, religious and international occasions,
+                  category and type filters, monthly details and interactive
+                  tooltips.
+                </dd>
+              </div>
+              <div>
+                <dt>Mahshid’s contribution</dt>
+                <dd>
+                  HR engagement concept, planning requirements, selection and
+                  organization of occasions, employee-activity ideas,
+                  categorization, content preparation, functional requirements
+                  and user experience.
+                </dd>
+              </div>
+              <div>
+                <dt>Intended HR value</dt>
+                <dd>
+                  Intended to help HR teams coordinate recognition, internal
+                  communications and workplace culture activities throughout the
+                  year.
+                </dd>
+              </div>
+            </dl>
+            <div class="tags">
+              <span>Employee engagement</span><span>People & culture</span
+              ><span>Content planning</span><span>User experience</span>
+            </div>
+            <p class="note">
+              The calendar interface is intentionally Persian and right-to-left.
+              The supplied screenshots show the original application.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="education">
+        <div class="wrap">
+          <div class="col">
+            <p class="eyebrow">06 — Education</p>
+            <h2 style="margin-bottom: 34px">
+              Grounded in <em>psychology</em>.
+            </h2>
+            <div class="edu">
+              <div class="when">2022 — 2024</div>
+              <div>
+                <h3>M.S. in Psychology</h3>
+                <div class="org">Islamic Azad University (IAU)</div>
+              </div>
+            </div>
+            <div class="edu">
+              <div class="when">2018 — 2022</div>
+              <div>
+                <h3>Bachelor of Science (B.S.)</h3>
+                <div class="org">FUM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-const seed = a => () => {                    // mulberry32: same layout every load
-  a = a + 0x6D2B79F5 | 0;
-  let t = Math.imul(a ^ a >>> 15, 1 | a);
-  t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t;
-  return ((t ^ t >>> 14) >>> 0) / 4294967296;
-};
-const rnd = seed(7);
-const unit = () => { let v; do v = new V(rnd(), rnd(), rnd()).multiplyScalar(2).subScalar(1); while (v.lengthSq() > 1 || v.lengthSq() < .01); return v.normalize(); };
+      <section id="contact" class="contact">
+        <div class="wrap">
+          <div class="col">
+            <p class="eyebrow">07 — Contact</p>
+            <h2>Let’s build collaborative, <em>high-performing</em> teams.</h2>
+            <div class="contact-links">
+              <a href="mailto:kazemi.mahshid75@gmail.com"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="5" width="18" height="14" rx="2" />
+                  <path d="m3 6 9 7 9-7" /></svg
+                ><span
+                  ><b>Email</b><span>kazemi.mahshid75@gmail.com</span></span
+                ></a
+              ><a href="tel:+989151234618"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M7 3H4a1 1 0 0 0-1 1c0 9.4 7.6 17 17 17a1 1 0 0 0 1-1v-3l-5-2-2 2a14 14 0 0 1-7-7l2-2Z"
+                  /></svg
+                ><span><b>Phone</b><span>+98 915 123 4618</span></span></a
+              ><a
+                href="https://wa.me/989151234618"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M21 11.5a9 9 0 0 1-13.5 7.8L3 21l1.7-4.5A9 9 0 1 1 21 11.5Z"
+                  />
+                  <path d="m8 7 2 3-1 1a8 8 0 0 0 4 4l1-1 3 2" /></svg
+                ><span><b>WhatsApp</b><span>Message on WhatsApp</span></span></a
+              ><a
+                href="https://www.linkedin.com/in/mahshid-kazemi-317737353"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2" />
+                  <path d="M7 10v7m0-10v.1M11 17v-7m0 3c0-4 6-4 6 0v4" /></svg
+                ><span><b>LinkedIn</b><span>Connect on LinkedIn</span></span></a
+              ><a
+                href="https://github.com/mahshid-kazemi"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9 20c-4 1-4-2-6-2m12 4v-4c0-1-.3-1.7-1-2 4-.4 6-2 6-5 0-1.2-.4-2.2-1-3 .3-1 .3-2-.2-3 0 0-1.3-.4-3.8 1a13 13 0 0 0-6 0C6.5 4.6 5.2 5 5.2 5c-.5 1-.5 2-.2 3-.6.8-1 1.8-1 3 0 3 2 4.6 6 5-.7.3-1 1-1 2v4"
+                  /></svg
+                ><span><b>GitHub</b><span>View GitHub profile</span></span></a
+              >
+              <div class="contact-placeholder">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m3 10 18-7-4 18-6-6-4 3 1-6Z" />
+                  <path d="m8 12 9-6-6 9" /></svg
+                ><span
+                  ><b>Telegram</b><span>Username to be confirmed</span></span
+                >
+              </div>
+            </div>
+            <div class="btns">
+              <button class="btn" id="copy" type="button">Copy email</button
+              ><a class="btn p" href="Mahshid-Kazemi-CV.pdf" download
+                >Download CV</a
+              >
+            </div>
+            <p id="copy-status" class="note" role="status"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="wrap">
+      <span>© <span id="yr">2026</span> Mahshid Kazemi</span
+      ><span>HR Business Partner · <a href="#hero">Back to top ↑</a></span>
+    </footer>
 
-const glow = (() => {
-  const c = document.createElement('canvas'); c.width = c.height = 64;
-  const g = c.getContext('2d'), r = g.createRadialGradient(32, 32, 0, 32, 32, 32);
-  r.addColorStop(0, '#fff'); r.addColorStop(.25, '#fffa'); r.addColorStop(1, '#fff0');
-  g.fillStyle = r; g.fillRect(0, 0, 64, 64);
-  return new THREE.CanvasTexture(c);
-})();
-const add = { transparent: true, depthWrite: false, blending: THREE.AdditiveBlending };
-
-// four skill areas = four teams, each a cluster of people around a hub
-const CL = [['HR Strategy', '#6ea8ff'], ['Agile Management', '#4fd1c5'], ['People & Culture', '#ff9d7a'], ['Behavioral Science', '#f4c76a']]
-  .map(([name, hex], i) => ({ name, color: new THREE.Color(hex), i, f: .9 }));
-const POOL = [];                              // edges pulses can travel: [a, b, cluster | -1]
-const core = new V(0, 0, 0);
-const labels = [];
-
-CL.forEach(c => {
-  const a = Math.PI / 4 + c.i * Math.PI / 2;
-  c.center = new V(Math.sin(a) * 7.5, (c.i % 2 ? 1.3 : -1.3), Math.cos(a) * 7.5);
-  const n = 58, P = [c.center.clone()];
-  for (let k = 1; k < n; k++) P.push(unit().multiplyScalar(3 * Math.pow(rnd(), .6)).multiply(new V(1, .8, 1)).add(c.center));
-  c.P = P;
-
-  const mesh = new THREE.InstancedMesh(new THREE.SphereGeometry(1, 14, 14), new THREE.MeshBasicMaterial(), n);
-  const m = new THREE.Matrix4();
-  P.forEach((p, k) => {
-    m.compose(p, new THREE.Quaternion(), new V(1, 1, 1).multiplyScalar(k ? .06 + rnd() * .09 : .34));
-    mesh.setMatrixAt(k, m);
-    mesh.setColorAt(k, c.color.clone().offsetHSL(0, 0, (rnd() - .5) * .18));
-  });
-  c.nodes = mesh;
-
-  const seg = [];
-  P.forEach((p, k) => {
-    if (!k) return;
-    P.map((q, j) => [j, p.distanceToSquared(q)]).filter(([j]) => j !== k).sort((x, y) => x[1] - y[1]).slice(0, 2)
-      .forEach(([j]) => seg.push(p, P[j]));
-    if (rnd() < .3) { seg.push(p, P[0]); POOL.push([P[0], p, c.i]); }
-  });
-  c.lines = new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(seg), new THREE.LineBasicMaterial({ ...add, opacity: .42 }));
-  c.hub = new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints([core, c.center]), new THREE.LineBasicMaterial({ ...add, opacity: .7 }));
-  for (let r = 0; r < 4; r++) POOL.push([core, c.center, -1]);
-  c.halo = new THREE.Sprite(new THREE.SpriteMaterial({ map: glow, color: c.color, ...add, opacity: .6 }));
-  c.halo.position.copy(c.center); c.halo.scale.setScalar(3.4);
-  scene.add(mesh, c.lines, c.hub, c.halo);
-
-  const el = document.createElement('div');
-  el.className = 'lbl'; el.style.setProperty('--c', '#' + c.color.getHexString());
-  el.innerHTML = `<span>${c.name}</span>`;
-  document.getElementById('labels').append(el);
-  labels.push({ el, at: c.center.clone().add(new V(0, .5, 0)), c: c.i });
-});
-
-// bridges between teams: the HR partner's real job
-const bridge = [];
-CL.forEach(c => { const o = CL[(c.i + 1) % 4]; for (let k = 0; k < 6; k++) bridge.push(c.P[1 + (rnd() * 57 | 0)], o.P[1 + (rnd() * 57 | 0)]); });
-scene.add(new THREE.LineSegments(new THREE.BufferGeometry().setFromPoints(bridge), new THREE.LineBasicMaterial({ ...add, color: 0xcfd6ff, opacity: .1 })));
-
-// the HRBP at the centre
-const centre = new THREE.Mesh(new THREE.SphereGeometry(.55, 32, 32), new THREE.MeshBasicMaterial({ color: 0xfff1e6 }));
-const centreHalo = new THREE.Sprite(new THREE.SpriteMaterial({ map: glow, color: 0xffb48f, ...add, opacity: .45 }));
-centreHalo.scale.setScalar(5);
-const rings = [0, 1].map(i => {
-  const r = new THREE.Mesh(new THREE.TorusGeometry(1.15 + i * .45, .012, 8, 160), new THREE.MeshBasicMaterial({ color: 0xffd9c4, ...add, opacity: .55 }));
-  r.rotation.set(1.2 + i * .9, i * .7, 0); return r;
-});
-scene.add(centre, centreHalo, ...rings);
-labels.push({ el: Object.assign(document.createElement('div'), { className: 'lbl', innerHTML: '<span>HR Business Partner</span>' }), at: new V(0, .7, 0), c: -1 });
-labels.at(-1).el.style.setProperty('--c', '#ffb48f'); document.getElementById('labels').append(labels.at(-1).el);
-
-// ambient dust for depth
-const dust = new THREE.Points(new THREE.BufferGeometry().setFromPoints(Array.from({ length: 450 }, () => unit().multiplyScalar(14 + rnd() * 30))),
-  new THREE.PointsMaterial({ size: .09, color: 0x8d93a1, ...add, opacity: .55 }));
-scene.add(dust);
-
-// pulses: messages travelling the network
-const NP = 40, pPos = new Float32Array(NP * 3), pCol = new Float32Array(NP * 3);
-const pulses = Array.from({ length: NP }, () => ({ e: POOL[rnd() * POOL.length | 0], t: rnd(), s: .25 + rnd() * .35, d: rnd() < .5 }));
-const pGeo = new THREE.BufferGeometry();
-pGeo.setAttribute('position', new THREE.BufferAttribute(pPos, 3).setUsage(THREE.DynamicDrawUsage));
-pGeo.setAttribute('color', new THREE.BufferAttribute(pCol, 3).setUsage(THREE.DynamicDrawUsage));
-scene.add(new THREE.Points(pGeo, new THREE.PointsMaterial({ size: .55, map: glow, vertexColors: true, ...add })));
-
-/* ---------- scroll story ---------- */
-// d = distance, az/el = orbit angles, off = horizontal framing (+ pushes the network right, away from left-aligned text)
-const SEC = [
-  { d: 33, az: 0,   el: .32, off: .22, lbl: 1, sp: 1 },    // hero: whole organisation
-  { d: 23, az: 2.3, el: .12, off: -.27, lbl: 0, sp: 1.6, ctr: 1, dim: .85 },  // profile: the partner at the centre
-  { d: 28, az: 3.7, el: .32, off: .27, lbl: 0, sp: 1.3, dim: .85 },  // experience
-  { d: 24, az: 4.5, el: .22, off: -.26, lbl: 0, sp: 1.2, dim: .85 }, // approach
-  { d: 30, az: 0,   el: .2,  off: .22, lbl: 1, sp: 1, skills: 1 }, // skills: fly to each team
-  { d: 24, az: 5.1, el: .15, off: .22, lbl: 0, sp: 1 },    // education
-  { d: 38, az: 6.9, el: .5,  off: 0,   lbl: 0, sp: 1.6, dim: .3 },  // contact
-];
-const secs = [...document.querySelectorAll('main section')];
-const navA = [...document.querySelectorAll('nav ul a')];
-const rows = [...document.querySelectorAll('.skill')];
-let tops = [], hover = -1, lastFc = -2, lastIdx = -1;
-rows.forEach(r => {
-  r.style.setProperty('--c', '#' + CL[r.dataset.c].color.getHexString());
-  const on = () => hover = +r.dataset.c;
-  r.addEventListener('pointerenter', on); r.addEventListener('focus', on); r.addEventListener('click', on);
-  r.addEventListener('pointerleave', () => hover = -1); r.addEventListener('blur', () => hover = -1);
-});
-
-rows.forEach((r, i) => r.addEventListener('keydown', e => {
-  if (e.key === 'ArrowDown' || e.key === 'ArrowUp') { e.preventDefault(); rows[(i + (e.key === 'ArrowDown' ? 1 : 3)) % 4].focus(); }
-}));
-
-const ptr = { x: 0, y: 0 };
-addEventListener('pointermove', e => { ptr.x = e.clientX / innerWidth - .5; ptr.y = e.clientY / innerHeight - .5; });
-function resize() {
-  const w = innerWidth, h = innerHeight;
-  renderer.setSize(w, h, false); composer.setSize(w, h);
-  camera.aspect = w / h; camera.updateProjectionMatrix();
-  tops = secs.map(s => s.offsetTop);
-}
-addEventListener('resize', resize); resize();
-document.fonts?.ready.then(resize); addEventListener('load', resize);
-
-const cam = { dim: 1, az: -1.4, el: .75, d: 70, ctr: 0, off: 0, f: new V(), lbl: 0 };
-const wrap = (a, ref) => a + Math.round((ref - a) / (2 * Math.PI)) * 2 * Math.PI;
-const tmp = new V(), col = new THREE.Color(), clock = new THREE.Clock(), bar = document.getElementById('bar');
-
-renderer.setAnimationLoop(() => {
-  const dt = Math.min(clock.getDelta(), .05), t = clock.elapsedTime, k = 1 - Math.exp(-dt * (t < 3 ? 1.3 : 2.6)), m = mobile();
-  const mid = scrollY + innerHeight * .5;
-  const idx = Math.max(0, tops.findIndex((_, i) => i === tops.length - 1 || mid < tops[i + 1]));
-  const S = SEC[idx];
-  if (idx !== lastIdx) { navA.forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + secs[idx].id)); lastIdx = idx; }
-  bar.style.transform = `scaleX(${scrollY / Math.max(1, document.documentElement.scrollHeight - innerHeight)})`;
-
-  // which team is in focus (skills: hover, otherwise auto-tour)
-  const fc = S.skills ? (hover >= 0 ? hover : reduce ? 0 : Math.floor(t / 4) % 4) : -1;
-  if (fc !== lastFc) { rows.forEach((r, i) => r.classList.toggle('on', i === fc)); lastFc = fc; }
-
-  // camera target
-  const T = { d: S.d, az: S.az, el: S.el, f: core };
-  if (fc >= 0) { const c = CL[fc].center; T.f = c; T.d = 10; T.az = Math.atan2(c.x, c.z) + .5; T.el = .2; }
-  T.d *= m ? 1.3 : Math.max(1, 1.6 / camera.aspect);
-  cam.az += (wrap(T.az, cam.az) - cam.az) * k; cam.el += (T.el - cam.el) * k; cam.d += (T.d - cam.d) * k;
-  cam.f.lerp(T.f, k); cam.off += ((m ? 0 : S.off) - cam.off) * k; cam.lbl += (S.lbl - cam.lbl) * k; cam.ctr += ((S.ctr || 0) - cam.ctr) * k; cam.dim += ((S.dim || 1) - cam.dim) * k;
-
-  const az = cam.az + (reduce ? 0 : t * .035) + ptr.x * .25, el = cam.el - ptr.y * .12;
-  camera.position.set(Math.sin(az) * Math.cos(el), Math.sin(el), Math.cos(az) * Math.cos(el)).multiplyScalar(cam.d).add(cam.f);
-  camera.lookAt(cam.f);
-  camera.setViewOffset(innerWidth, innerHeight, -cam.off * innerWidth, 0, innerWidth, innerHeight);
-  camera.updateMatrixWorld();
-
-  // dim the teams that are not in focus
-  const g = (m ? .38 : 1) * cam.dim;
-  CL.forEach(c => {
-    c.f += ((fc < 0 ? .9 : c.i === fc ? 1.3 : .14) - c.f) * k;
-    c.nodes.material.color.setScalar(c.f * g);
-    c.lines.material.color.copy(c.color).multiplyScalar(c.f * g);
-    c.hub.material.color.copy(c.color).multiplyScalar(c.f * g);
-    c.halo.material.opacity = .5 * c.f * g;
-  });
-  centreHalo.material.opacity = .45 * g; centre.material.color.setScalar(g);
-  rings.forEach((r, i) => { r.rotation.z += dt * (reduce ? 0 : .35 + i * .2); r.material.opacity = .55 * g; });
-
-  // pulses
-  pulses.forEach((p, i) => {
-    p.t += dt * p.s * S.sp * (reduce ? 0 : 1);
-    if (p.t >= 1) { p.t = 0; p.e = POOL[rnd() * POOL.length | 0]; p.d = rnd() < .5; }
-    const [a, b, ci] = p.e;
-    tmp.lerpVectors(p.d ? a : b, p.d ? b : a, p.t).toArray(pPos, i * 3);
-    (ci < 0 ? col.set(0xffd9c4).multiplyScalar(g) : col.copy(CL[ci].color).multiplyScalar(1.4 * CL[ci].f * g)).toArray(pCol, i * 3);
-  });
-  pGeo.attributes.position.needsUpdate = pGeo.attributes.color.needsUpdate = true;
-
-  // HTML labels pinned to the 3D hubs
-  labels.forEach(({ el, at, c }) => {
-    tmp.copy(at).project(camera);
-    const vis = tmp.z < 1 ? (c < 0 ? cam.ctr : cam.lbl * (fc < 0 || c === fc ? 1 : .25)) : 0;
-    el.style.opacity = vis.toFixed(2);
-    el.style.transform = `translate(${((tmp.x * .5 + .5) * innerWidth).toFixed(1)}px,${((-tmp.y * .5 + .5) * innerHeight).toFixed(1)}px)`;
-  });
-
-  composer.render();
-  document.body.classList.add('ready');
-});
-} catch (err) { console.warn('WebGL unavailable, showing static page.', err); }
-</script>
-</body>
+    <dialog id="lightbox" aria-labelledby="lightbox-caption">
+      <div class="lightbox-toolbar">
+        <a id="full-image" class="pill" target="_blank" rel="noopener"
+          >Open original size ↗</a
+        ><button class="pill" id="close-preview" type="button" autofocus>
+          Close preview ×
+        </button>
+      </div>
+      <img id="lightbox-image" alt="" />
+      <p id="lightbox-caption"></p>
+    </dialog>
+    <script src="portfolio.js" defer></script>
+  </body>
 </html>

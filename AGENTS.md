@@ -1,14 +1,25 @@
-# Mahshid Kazemi — resume site
+# Mahshid Kazemi — HR portfolio
 
-Single-page portfolio built from `Mahshid-Kazemi-CV.pdf`. One file, no build step: `index.html`
-(CSS + the scene module inline). Fully local: three.js r170 + post-processing addons in `vendor/three/`, fonts (Fraunces + Plus Jakarta Sans) in `fonts/`.
+Static GitHub Pages site. No build step or production dependencies.
 
 ## Run
-`python3 -m http.server 5173` then open http://localhost:5173 (ES modules need http, not file://).
 
-## Notes
-- 3D scene = the org as a network: 4 clusters (the 4 skill areas) around an HRBP centre node.
-  Per-section camera targets live in the `SEC` array; skills rows (`.skill[data-c]`) focus a cluster.
-- Layout is text on one side, network on the other (`off` in `SEC`); mobile dims the scene and adds a scrim.
-- Sections: hero, profile, experience, approach, skills, education, contact (order must match the `SEC` array in the script).
-- Scrolling: a small script snaps one section per wheel/swipe/key (700ms ease, then 300ms input lock: `LOCK`/`DUR`). Sections taller than the viewport scroll natively until their edge.
+`python3 -m http.server 5173`, then open http://localhost:5173.
+
+## Structure
+
+- `index.html`: English professional content, resume-based experience and education, three HR case studies, contact links and Person metadata.
+- `refinements.css`: responsive layout, local-font typography, focus states and reduced-motion support.
+- `portfolio.js`: mobile navigation, accessible native-dialog screenshot previews, email copy and passive scroll progress/navigation. Scrolling is native; do not intercept wheel, touch or navigation keys.
+- `network.js`: optional static desktop network decoration using local Three.js. Renders only on initialization/resizing; no animation loop, bloom or pointer tracking. Skipped on smaller screens and for reduced motion.
+- `fonts/`: locally hosted Fraunces and Plus Jakarta Sans.
+- `assets/projects/`: two redacted internal dashboard previews and three original supplied Persian calendar screenshots. Never commit unredacted internal screenshots.
+- `Mahshid-Kazemi-CV.pdf`: exact supplied resume. Preserve its bytes.
+
+## Content boundaries
+
+Use the resume for employers, titles, dates and education. HR project contributions cover domain expertise, business analysis, requirements, documentation, content and handoff; do not attribute software engineering or unsupported job titles. Intended project value is not a measured outcome. Telegram remains a placeholder until a username is confirmed.
+
+## Verification
+
+Audit widths 320, 375, 390, 430, 768, 1024, 1440 and 1920. Check all screenshot dialogs, Escape/focus restoration, mobile menu, keyboard navigation, reduced motion, no-JavaScript fallback, contact URL targets, exact PDF download and local asset loading. See `VERIFICATION.md` for the latest results.
