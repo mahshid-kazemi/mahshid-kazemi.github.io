@@ -23,7 +23,7 @@ Chromium via Playwright against `python3 -m http.server 5173`:
 - Local fonts, local Three.js and supplied project PNGs load successfully.
 - The browser download returns the exact supplied PDF (SHA-256 checked). PDF text extraction succeeds.
 - Email, phone, WhatsApp, LinkedIn and GitHub URL targets match the request. This checks link wiring, not device app configuration, message delivery or ownership of external profiles. No messages were sent.
-- Telegram deliberately has a clearly labeled username placeholder, with no invented destination.
+- Telegram now uses the official phone-number deep-link format `https://t.me/+989151234618`, based on the supplied contact number. No username is invented. Account resolution and messaging depend on Telegram privacy settings and device app configuration.
 - Automated axe-core WCAG 2 A/AA and WCAG 2.1 AA audit: zero violations at 320px and 1440px. Automated checks do not replace assistive-technology testing.
 - Static HTML/CSS/JS; no build required and no production package dependencies added.
 
@@ -33,7 +33,7 @@ Reviewed [Ben Clarke’s leadership and culture portfolio](https://www.benclarke
 
 ## Human review
 
-- Confirm the Telegram username if a direct link is desired.
+- A verified Telegram username can replace the phone-number link if phone-number discovery is restricted.
 - The requester authorized merging and publication and explicitly requested the original unmasked screenshots. Their source resolution is the maximum detail available in the supplied files.
 - Native application launches require a device with the relevant phone/mail/messaging applications configured.
 
@@ -50,3 +50,7 @@ Kept the existing local Fraunces and Plus Jakarta Sans fonts. Increased body tex
 - Chromium checks at 320, 375, 390, 430, 768, 1024, 1440 and 1920px passed: no overflow or console errors; portrait stays within the viewport; all five screenshot dialogs retain the selected palette and original-size destinations; selection persists on reload.
 - Actual rendered snapshots differ across the three palettes. Sampled opacity during the transition was 0.468482, confirming an intermediate cross-fade rather than an abrupt filter swap.
 - axe-core WCAG 2 A/AA and WCAG 2.1 AA scans report zero violations at 390px and 1440px. No-JavaScript image/portrait destinations remain available.
+
+## Telegram contact correction
+
+Replaced the non-interactive placeholder with an accessible HTTPS link to `https://t.me/+989151234618`, using the [official Telegram phone-number link syntax](https://core.telegram.org/api/links#phone-number-links). Confirmed the contact is a focusable link, has the expected destination, uses safe new-tab attributes, and retains the platform icon. Link wiring is checked; resolving the account requires Telegram and its privacy settings. No messages or calls were sent.

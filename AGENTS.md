@@ -20,7 +20,7 @@ Static GitHub Pages site. No build step or production dependencies.
 
 ## Content boundaries
 
-Use the resume for employers, titles, dates and education. HR project contributions cover domain expertise, business analysis, requirements, documentation, content and handoff; do not attribute software engineering or unsupported job titles. Intended project value is not a measured outcome. Telegram remains a placeholder until a username is confirmed.
+Use the resume for employers, titles, dates and education. HR project contributions cover domain expertise, business analysis, requirements, documentation, content and handoff; do not attribute software engineering or unsupported job titles. Intended project value is not a measured outcome. Telegram uses the documented phone-number link `https://t.me/+989151234618`. Resolution depends on Telegram account privacy settings; replace it with a verified username if one is supplied.
 
 ## Verification
 
