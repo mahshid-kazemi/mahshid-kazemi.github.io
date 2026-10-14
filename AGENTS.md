@@ -11,9 +11,9 @@ Static GitHub Pages site. No build step or production dependencies.
 - `index.html`: English professional content, resume-based experience and education, three HR case studies, contact links and Person metadata.
 - `refinements.css`: responsive layout, local-font typography, focus states and reduced-motion support.
 - `portfolio.js`: mobile navigation, accessible native-dialog screenshot previews, email copy and passive scroll progress/navigation. Scrolling is native; do not intercept wheel, touch or navigation keys.
-- `network.js`: optional static desktop network decoration using local Three.js. Renders only on initialization/resizing; no animation loop, bloom or pointer tracking. Skipped on smaller screens and for reduced motion.
+- `network.js`: original animated organisation network restored from commit `9026bf9`, including geometry, bloom, pulses, camera transitions, pointer response and skill-cluster focus. Projects have a separate dimmed camera state. Reduced motion disables the scene; mobile uses the original dimming.
 - `fonts/`: locally hosted Fraunces and Plus Jakarta Sans.
-- `assets/projects/`: two redacted internal dashboard previews and three original supplied Persian calendar screenshots. Never commit unredacted internal screenshots.
+- `assets/projects/`: the original supplied full-resolution dashboard and calendar PNGs. The requester explicitly asked to remove the dashboard masks; keep these files byte-identical to the supplied originals.
 - `Mahshid-Kazemi-CV.pdf`: exact supplied resume. Preserve its bytes.
 
 ## Content boundaries

@@ -19,7 +19,8 @@ html {
 body {
   background: var(--bg);
   color: var(--fg);
-  font: 400 16px/1.75 var(--sans);
+  font: 400 16.5px/1.75 var(--sans);
+  text-rendering: optimizeLegibility;
   font-optical-sizing: auto;
   -webkit-font-smoothing: antialiased;
 }
@@ -57,19 +58,70 @@ em {
 }
 #bg {
   position: fixed;
-  left: 50%;
-  top: 0;
-  width: 50%;
+  inset: 0;
+  width: 100%;
   height: 100%;
   z-index: -1;
   opacity: 0;
   pointer-events: none;
 }
 body.ready #bg {
-  opacity: 0.48;
+  opacity: 1;
 }
 #labels {
-  display: none;
+  pointer-events: none;
+}
+.lbl {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+.lbl span {
+  display: block;
+  transform: translate(-50%, -135%);
+  white-space: nowrap;
+  font-size: 11.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg);
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(10, 13, 18, 0.6);
+  border: 1px solid color-mix(in srgb, var(--c) 55%, transparent);
+  backdrop-filter: blur(6px);
+}
+.lbl span::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c);
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+@media (max-width: 800px) {
+  .lbl {
+    display: none;
+  }
+}
+.skill {
+  transition:
+    border-color 0.2s,
+    background 0.2s;
+  border-left: 2px solid transparent;
+  padding-left: 12px;
+}
+.skill.on {
+  border-left-color: var(--c);
+  background: color-mix(in srgb, var(--c) 6%, transparent);
+}
+.skill.on .n {
+  color: var(--c);
 }
 #bar {
   position: fixed;
@@ -105,7 +157,7 @@ nav ul {
   gap: 22px;
   list-style: none;
   padding: 0;
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
 }
 nav ul a {
@@ -318,7 +370,7 @@ p.lead {
   margin: 12px 0 0;
   padding-left: 18px;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 15px;
 }
 .job li + li {
   margin-top: 8px;
@@ -468,7 +520,7 @@ figcaption span {
   margin-bottom: 9px;
 }
 .case-details dd {
-  font-size: 14px;
+  font-size: 15px;
   color: var(--muted);
 }
 .contact .col {
@@ -624,9 +676,7 @@ dialog p {
     font-size: 12px;
     padding: 10px 15px;
   }
-  #bg {
-    display: none;
-  }
+
   section {
     min-height: 0;
     padding: 85px 0;
@@ -718,7 +768,7 @@ dialog p {
     padding: 16px;
   }
   .project-intro {
-    font-size: 15px;
+    font-size: 16px;
   }
   .case-study {
     padding-top: 32px;
@@ -767,5 +817,29 @@ dialog p {
   }
   body:has(.menu-toggle[hidden]) #hero {
     padding-top: 70px;
+  }
+}
+
+/* Keep the original network visible behind the content, with readable text surfaces. */
+@media (min-width: 1025px) {
+  #profile,
+  #approach {
+    background: rgba(10, 13, 18, 0.35);
+  }
+}
+@media (max-width: 800px) {
+  .col {
+    background: rgba(10, 13, 18, 0.72);
+    padding: 20px;
+    margin-inline: -20px;
+    border-radius: 16px;
+  }
+  .right .col {
+    margin-left: -20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #labels {
+    display: none;
   }
 }

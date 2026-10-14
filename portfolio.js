@@ -80,9 +80,6 @@ function updateNavigation() {
 }
 addEventListener("scroll", updateNavigation, { passive: true });
 updateNavigation();
-if (
-  matchMedia("(min-width: 1025px)").matches &&
-  !matchMedia("(prefers-reduced-motion: reduce)").matches
-) {
+if (!matchMedia("(prefers-reduced-motion: reduce)").matches) {
   import("./network.js").then((module) => module.initNetwork()).catch(() => {});
 }
